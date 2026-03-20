@@ -4,22 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | SAS Home Energy</title>
-  <meta name="description" content="Get in touch with SAS Home Energy to book an EPC survey or retrofit assessment. Call 07480 839113 or submit an enquiry online." />
+  <meta name="description" content="Book an EPC survey or retrofit assessment. Call SAS Home Energy on 07480 839113 or send an enquiry online. Available 6 days a week." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"SAS Home Energy","telephone":"07480839113","url":"https://sashomeenergy.co.uk","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"20:00"}]}
+  </script>
   <style>
     :root{--navy:#1e2d45;--navy-deep:#141e2f;--green:#4a9e3f;--green-light:#5cba50;--teal:#1e7a8c;--amber:#f5a623;--off-white:#f7f8f5;--mid-grey:#6b7280;--light-border:rgba(255,255,255,0.08)}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{font-family:'DM Sans',sans-serif;background:var(--off-white);color:var(--navy);overflow-x:hidden}
-
-    /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;height:72px;background:rgba(20,30,47,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--light-border)}
     .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;z-index:101}
     .nav-logo img{height:46px;width:auto}
-    .nav-links{display:flex;gap:36px;list-style:none}
-    .nav-links a{color:rgba(255,255,255,0.78);text-decoration:none;font-size:0.88rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links{display:flex;gap:28px;list-style:none}
+    .nav-links a{color:rgba(255,255,255,0.78);text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
     .nav-links a:hover,.nav-links a.active{color:var(--amber)}
     .nav-cta{background:var(--green);color:#fff!important;padding:9px 22px;border-radius:4px;transition:background 0.2s!important}
     .nav-cta:hover{background:var(--green-light)!important}
@@ -36,22 +37,16 @@
     .mobile-menu a.mobile-cta:hover{background:var(--green-light)}
     .mobile-menu .mobile-phone{margin-top:24px;color:rgba(255,255,255,0.5);font-size:0.9rem;border-bottom:none;padding:0}
     .mobile-menu .mobile-phone a{font-size:1.1rem;color:var(--amber);border-bottom:none;display:inline}
-
-    /* PAGE HERO */
     .page-hero{background:linear-gradient(135deg,var(--navy-deep),var(--navy) 60%,#1a3a4a);padding:140px 6vw 80px;position:relative;overflow:hidden}
     .page-hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
     .page-hero-inner{position:relative;z-index:2;max-width:620px}
-    .breadcrumb{font-size:0.78rem;color:rgba(255,255,255,0.45);margin-bottom:18px;letter-spacing:0.05em}
+    .breadcrumb{font-size:0.78rem;color:rgba(255,255,255,0.45);margin-bottom:18px}
     .breadcrumb a{color:rgba(255,255,255,0.45);text-decoration:none}
     .breadcrumb a:hover{color:var(--amber)}
     .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4.5vw,3.2rem);color:#fff;line-height:1.2;margin-bottom:18px}
     .page-hero p{font-size:1.02rem;color:rgba(255,255,255,0.68);line-height:1.78;font-weight:300}
-
-    /* CONTACT */
     .contact-section{padding:72px 6vw;background:#fff}
     .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:56px;align-items:start}
-
-    /* Info cards */
     .info-panel{display:flex;flex-direction:column;gap:0}
     .info-card{background:var(--off-white);border-radius:12px;padding:24px;margin-bottom:16px}
     .info-card:last-child{margin-bottom:0}
@@ -65,8 +60,6 @@
     .hours-row:last-child{border-bottom:none}
     .hours-day{color:var(--navy);font-weight:500}
     .available{color:var(--green);font-weight:600}
-
-    /* Form */
     .form-panel h2{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--navy);margin-bottom:8px}
     .form-panel>p{font-size:0.92rem;color:var(--mid-grey);margin-bottom:28px;font-weight:300;line-height:1.6}
     .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
@@ -84,8 +77,6 @@
     .success-message.show{display:block}
     .success-message h4{color:var(--green);font-weight:700;margin-bottom:6px}
     .success-message p{font-size:0.88rem;color:var(--mid-grey)}
-
-    /* FAQ */
     .faq-section{padding:72px 6vw;background:var(--off-white)}
     .faq-header{text-align:center;margin-bottom:44px}
     .section-eyebrow{font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
@@ -95,8 +86,6 @@
     .faq-item:hover{box-shadow:0 6px 24px rgba(30,45,69,0.08)}
     .faq-q{font-weight:700;font-size:0.92rem;color:var(--navy);margin-bottom:10px}
     .faq-a{font-size:0.85rem;color:var(--mid-grey);line-height:1.7;font-weight:300}
-
-    /* FOOTER */
     footer{background:var(--navy-deep);color:rgba(255,255,255,0.55);padding:48px 6vw 28px}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px}
     .footer-brand img{height:52px;margin-bottom:14px;display:block}
@@ -106,61 +95,12 @@
     .footer-col a:hover{color:var(--amber)}
     .footer-col p{font-size:0.87rem;line-height:1.7}
     .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:22px;display:flex;justify-content:space-between;font-size:0.78rem;flex-wrap:wrap;gap:10px}
-
-    /* ══ TABLET ══ */
-    @media(max-width:900px){
-      .nav-links{display:none}
-      .hamburger{display:flex}
-      .mobile-menu{display:flex}
-      .page-hero{padding:110px 6vw 60px}
-      .contact-grid{grid-template-columns:1fr;gap:40px}
-      .faq-grid{grid-template-columns:1fr}
-      .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
-      .footer-brand{grid-column:1 / -1}
-    }
-
-    /* ══ MOBILE ══ */
-    @media(max-width:600px){
-      nav{padding:0 5vw;height:64px}
-      .nav-logo img{height:40px}
-      .mobile-menu{top:64px}
-      .page-hero{padding:88px 5vw 48px}
-      .page-hero h1{font-size:clamp(1.7rem,7.5vw,2.2rem)}
-      .page-hero p{font-size:0.95rem}
-      .contact-section{padding:48px 5vw}
-      .contact-grid{gap:32px}
-      .info-card{padding:18px}
-      .form-panel h2{font-size:1.5rem}
-      .form-row{grid-template-columns:1fr}
-      .btn-submit{font-size:1rem;padding:16px}
-      .faq-section{padding:48px 5vw}
-      .faq-header .section-title{font-size:clamp(1.4rem,5.5vw,1.9rem)}
-      .faq-grid{gap:12px}
-      .faq-item{padding:18px}
-      .footer-grid{grid-template-columns:1fr;gap:24px}
-      .footer-brand{grid-column:auto}
-      footer{padding:36px 5vw 20px}
-      .footer-bottom{flex-direction:column;text-align:center;gap:6px}
-
-      /* Big tap-friendly call button on mobile */
-      .mobile-call-bar{display:flex}
-    }
-
-    /* Floating call button — mobile only */
-    .mobile-call-bar{
-      display:none;
-      position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
-      z-index:200;
-    }
-    .mobile-call-bar a{
-      background:var(--green);color:#fff;
-      text-decoration:none;font-weight:700;font-size:1rem;
-      padding:14px 32px;border-radius:50px;
-      box-shadow:0 6px 24px rgba(74,158,63,0.45);
-      display:flex;align-items:center;gap:10px;
-      white-space:nowrap;
-    }
-    @media(max-width:600px){.mobile-call-bar{display:flex}}
+    .footer-bottom a{color:rgba(255,255,255,0.4);text-decoration:none}
+    .footer-bottom a:hover{color:var(--amber)}
+    .mobile-call-bar{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:200}
+    .mobile-call-bar a{background:var(--green);color:#fff;text-decoration:none;font-weight:700;font-size:1rem;padding:14px 32px;border-radius:50px;box-shadow:0 6px 24px rgba(74,158,63,0.45);display:flex;align-items:center;gap:10px;white-space:nowrap}
+    @media(max-width:900px){.nav-links{display:none}.hamburger{display:flex}.mobile-menu{display:flex}.page-hero{padding:110px 6vw 60px}.contact-grid{grid-template-columns:1fr;gap:40px}.faq-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr;gap:28px}.footer-brand{grid-column:1/-1}}
+    @media(max-width:600px){nav{padding:0 5vw;height:64px}.nav-logo img{height:40px}.mobile-menu{top:64px}.page-hero{padding:88px 5vw 48px}.page-hero h1{font-size:clamp(1.7rem,7.5vw,2.2rem)}.contact-section{padding:48px 5vw}.contact-grid{gap:32px}.info-card{padding:18px}.form-panel h2{font-size:1.5rem}.form-row{grid-template-columns:1fr}.btn-submit{font-size:1rem;padding:16px}.faq-section{padding:48px 5vw}.faq-grid{gap:12px}.faq-item{padding:18px}.footer-grid{grid-template-columns:1fr;gap:24px}.footer-brand{grid-column:auto}footer{padding:36px 5vw 20px}.footer-bottom{flex-direction:column;text-align:center;gap:6px}.mobile-call-bar{display:flex}}
   </style>
 </head>
 <body>
@@ -171,42 +111,34 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
       <li><a href="contactus.html" class="active">Contact</a></li>
-      <li><a href="contactus.html" class="nav-cta">Book an Assessment</a></li>
+      <li><a href="contactus.html" class="nav-cta">Book Now</a></li>
     </ul>
-    <button class="hamburger" id="menuBtn" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="menuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Home</a>
     <a href="aboutus.html">About Us</a>
+    <a href="pricing.html">Pricing</a>
     <a href="contactus.html">Contact</a>
     <a href="contactus.html" class="mobile-cta">Book an Assessment</a>
     <p class="mobile-phone">Call us: <a href="tel:07480839113">07480 839113</a></p>
   </div>
-
-  <!-- Floating call button (mobile only) -->
-  <div class="mobile-call-bar">
-    <a href="tel:07480839113">📞 Call 07480 839113</a>
-  </div>
+  <div class="mobile-call-bar"><a href="tel:07480839113">📞 Call 07480 839113</a></div>
 
   <div class="page-hero">
     <div class="page-hero-inner">
       <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Contact Us</div>
       <h1>Get in Touch</h1>
-      <p>Whether you're ready to book an assessment or simply have a question about EPCs, we'd love to hear from you. Fill in the form below or give us a call — we're available six days a week.</p>
+      <p>Whether you're ready to book an assessment or simply have a question about EPCs, we'd love to hear from you. Fill in the form or give us a call — we're available six days a week.</p>
     </div>
   </div>
 
   <section class="contact-section">
     <div class="contact-grid">
       <div class="info-panel">
-        <div class="info-card">
-          <div class="info-card-header"><div class="info-icon">📞</div><h3>Call Us Directly</h3></div>
-          <a href="tel:07480839113">07480 839113</a>
-          <p>Speak with one of our assessors for advice, quotes, or to book an appointment straight away.</p>
-        </div>
+        <div class="info-card"><div class="info-card-header"><div class="info-icon">📞</div><h3>Call Us Directly</h3></div><a href="tel:07480839113">07480 839113</a><p>Speak with one of our assessors for advice, quotes, or to book an appointment straight away.</p></div>
         <div class="info-card">
           <div class="info-card-header"><div class="info-icon">🕐</div><h3>Opening Hours</h3></div>
           <div class="hours-row"><span class="hours-day">Monday</span><span class="available">9am – 8pm</span></div>
@@ -217,19 +149,12 @@
           <div class="hours-row"><span class="hours-day">Saturday</span><span class="available">9am – 8pm</span></div>
           <div class="hours-row"><span class="hours-day">Sunday</span><span style="color:var(--amber);font-weight:600">By Appointment</span></div>
         </div>
-        <div class="info-card">
-          <div class="info-card-header"><div class="info-icon">📍</div><h3>Coverage Area</h3></div>
-          <p>We cover properties across the <strong>UK</strong> — England, Wales, and Scotland. Urban or rural, traditional or modern, we'll come to you.</p>
-        </div>
-        <div class="info-card">
-          <div class="info-card-header"><div class="info-icon">⚡</div><h3>Fast Response</h3></div>
-          <p>We aim to respond to all online enquiries within a few hours during opening hours. For urgent requests, please call us directly.</p>
-        </div>
+        <div class="info-card"><div class="info-card-header"><div class="info-icon">📍</div><h3>Coverage Area</h3></div><p>We cover properties across the <strong>UK</strong> — England, Wales, and Scotland. Urban or rural, traditional or modern, we'll come to you.</p></div>
+        <div class="info-card"><div class="info-card-header"><div class="info-icon">💰</div><h3>Pricing</h3></div><p>EPCs from <strong>£60</strong>. Fixed prices with no hidden extras. <a href="pricing.html" style="color:var(--green);text-decoration:underline">See our full pricing page →</a></p></div>
       </div>
-
       <div class="form-panel">
         <h2>Send Us an Enquiry</h2>
-        <p>Tell us a little about your property and what you need — we'll get back to you promptly with a quote or to arrange your assessment.</p>
+        <p>Tell us about your property and what you need — we'll get back to you promptly with a quote or to arrange your assessment.</p>
         <div id="contactForm">
           <div class="form-row">
             <div class="form-group"><label for="firstName">First Name *</label><input type="text" id="firstName" placeholder="e.g. James" /></div>
@@ -243,39 +168,18 @@
           <div class="form-row">
             <div class="form-group">
               <label for="serviceType">Service Required *</label>
-              <select id="serviceType">
-                <option value="" disabled selected>Please select…</option>
-                <option>Domestic EPC</option>
-                <option>Retrofit Assessment</option>
-                <option>New Build EPC</option>
-                <option>Landlord MEES Compliance</option>
-                <option>Older / Traditional Property EPC</option>
-                <option>Not sure — need advice</option>
-              </select>
+              <select id="serviceType"><option value="" disabled selected>Please select…</option><option>Domestic EPC</option><option>Retrofit Assessment</option><option>New Build EPC</option><option>Landlord MEES Compliance</option><option>Older / Traditional Property EPC</option><option>Not sure — need advice</option></select>
             </div>
             <div class="form-group">
               <label for="propertyType">Property Type</label>
-              <select id="propertyType">
-                <option value="" disabled selected>Please select…</option>
-                <option>Detached House</option>
-                <option>Semi-Detached House</option>
-                <option>Terraced House</option>
-                <option>Flat / Apartment</option>
-                <option>Bungalow</option>
-                <option>Period / Traditional Property</option>
-                <option>New Build</option>
-                <option>Other</option>
-              </select>
+              <select id="propertyType"><option value="" disabled selected>Please select…</option><option>Detached House</option><option>Semi-Detached House</option><option>Terraced House</option><option>Flat / Apartment</option><option>Bungalow</option><option>Period / Traditional Property</option><option>New Build</option><option>Other</option></select>
             </div>
           </div>
-          <div class="form-group"><label for="message">Tell Us About Your Project</label><textarea id="message" placeholder="Please share any relevant details — the age of the property, any access considerations, your ideal dates, or any questions you have…"></textarea></div>
-          <p class="form-note">* Required fields. Your information will be used solely to respond to your enquiry and arrange your assessment. We do not share your details with third parties.</p>
+          <div class="form-group"><label for="message">Tell Us About Your Project</label><textarea id="message" placeholder="Please share any relevant details — the age of the property, access considerations, preferred dates, or any questions you have…"></textarea></div>
+          <p class="form-note">* Required fields. Your information will be used solely to respond to your enquiry. We do not share your details with third parties. See our <a href="privacy.html">Privacy Policy</a>.</p>
           <button class="btn-submit" onclick="submitForm()"><span>Send Enquiry</span><span>→</span></button>
         </div>
-        <div class="success-message" id="successMsg">
-          <h4>✓ Enquiry Received!</h4>
-          <p>Thank you for getting in touch. We'll be in contact with you shortly — usually within a few hours during opening hours.</p>
-        </div>
+        <div class="success-message" id="successMsg"><h4>✓ Enquiry Received!</h4><p>Thank you for getting in touch. We'll be in contact with you shortly — usually within a few hours during opening hours.</p></div>
       </div>
     </div>
   </section>
@@ -301,23 +205,20 @@
         <img src="https://www.dropbox.com/scl/fi/dybbf43rt3a0gb7jxwgl4/SAS-Home-Energy-logo-design-1.png?rlkey=93v1pexz0c1an2e80ktc2iy7s&st=g7nm3pd9&dl=1" alt="SAS Home Energy" />
         <p>Qualified Domestic Energy Assessors providing Energy Performance Certificates and retrofit assessments across the UK.</p>
       </div>
-      <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="aboutus.html">About Us</a><a href="contactus.html">Contact</a><a href="contactus.html">Book an Assessment</a></div>
+      <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="aboutus.html">About Us</a><a href="pricing.html">Pricing</a><a href="contactus.html">Contact</a></div>
       <div class="footer-col"><h4>Contact</h4><p>📞 <a href="tel:07480839113" style="color:rgba(255,255,255,.5);text-decoration:none">07480 839113</a></p><p style="margin-top:8px">Mon–Sat: 9am – 8pm</p><p>Sunday: By Appointment</p></div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 SAS Home Energy. All rights reserved.</span>
-      <span>Accredited Domestic Energy Assessors · UK Nationwide</span>
+      <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; Accredited Domestic Energy Assessors · UK Nationwide</span>
     </div>
   </footer>
-
   <script>
     const btn=document.getElementById('menuBtn'),menu=document.getElementById('mobileMenu');
     btn.addEventListener('click',()=>{const o=menu.classList.toggle('open');btn.classList.toggle('open',o);document.body.style.overflow=o?'hidden':''});
     menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');btn.classList.remove('open');document.body.style.overflow=''}));
-
     function submitForm(){
-      const req=['firstName','lastName','email','postcode','serviceType'];
-      let valid=true;
+      const req=['firstName','lastName','email','postcode','serviceType'];let valid=true;
       req.forEach(id=>{const el=document.getElementById(id);if(!el.value.trim()){el.style.borderColor='#e53e3e';valid=false}else el.style.borderColor='#d5dae2'});
       if(!valid){alert('Please fill in all required fields before submitting.');return}
       document.getElementById('contactForm').style.opacity='0.4';
