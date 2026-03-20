@@ -66,7 +66,21 @@
     .page-hero h1 em { color:var(--amber); font-style:normal; }
     .page-hero p { font-size:1.02rem; color:rgba(255,255,255,0.68); line-height:1.78; font-weight:300; max-width:580px; }
     .hero-badges { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
-    .hero-badge { display:inline-flex; align-items:center; gap:7px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:rgba(255,255,255,0.82); font-size:0.78rem; font-weight:500; padding:7px 14px; border-radius:20px; }
+    .hero-badge {
+      display:inline-flex; align-items:center; gap:7px;
+      background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15);
+      color:rgba(255,255,255,0.82); font-size:0.78rem; font-weight:500;
+      padding:7px 14px; border-radius:20px;
+      text-decoration:none;
+      transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s;
+      cursor: pointer;
+    }
+    .hero-badge:hover {
+      background: rgba(245,166,35,0.18);
+      border-color: rgba(245,166,35,0.5);
+      color: var(--amber);
+      transform: translateY(-2px);
+    }
 
     /* SHARED */
     .section-eyebrow { font-size:0.75rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--green); margin-bottom:12px; }
@@ -256,14 +270,14 @@
       <h1>Improve Your Home.<br><em>Improve Your Rating.</em></h1>
       <p>A better EPC rating means lower energy bills, a higher property value, and a warmer, more comfortable home. Our assessors identify exactly which improvements will make the biggest difference — and which grants you may be entitled to.</p>
       <div class="hero-badges">
-        <span class="hero-badge">🏠 Loft Insulation</span>
-        <span class="hero-badge">🔥 Heating Upgrades</span>
-        <span class="hero-badge">☀️ Solar Installations</span>
-        <span class="hero-badge">🧱 Wall Insulation</span>
-        <span class="hero-badge">🪟 Glazing</span>
-        <span class="hero-badge">💨 Ventilation</span>
-        <span class="hero-badge">🏗️ Roof Repairs</span>
-        <span class="hero-badge">🚪 Draught Proofing</span>
+        <a href="#loft" class="hero-badge">🏠 Loft Insulation</a>
+        <a href="#heating" class="hero-badge">🔥 Heating Upgrades</a>
+        <a href="#solar" class="hero-badge">☀️ Solar Installations</a>
+        <a href="#walls" class="hero-badge">🧱 Wall Insulation</a>
+        <a href="#glazing" class="hero-badge">🪟 Glazing</a>
+        <a href="#ventilation" class="hero-badge">💨 Ventilation</a>
+        <a href="#roof" class="hero-badge">🏗️ Roof Repairs</a>
+        <a href="#roof" class="hero-badge">🚪 Draught Proofing</a>
       </div>
     </div>
   </div>
@@ -413,9 +427,7 @@
     </div>
   </section>
 
-  <!-- WALL INSULATION -->
-  <section class="improvement alt" id="walls">
-    <div class="improvement-grid reverse">
+  <section class="improvement" id="glazing">    <div class="improvement-grid reverse">
       <div class="improvement-visual">
         <div class="improvement-visual-inner visual-walls">
           <div>
