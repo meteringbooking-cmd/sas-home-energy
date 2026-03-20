@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | SAS Home Energy</title>
+  <meta name="description" content="SAS Home Energy privacy policy — how we collect, use and protect your personal data in accordance with UK GDPR." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#1e2d45;--navy-deep:#141e2f;--green:#4a9e3f;--green-light:#5cba50;--teal:#1e7a8c;--amber:#f5a623;--off-white:#f7f8f5;--mid-grey:#6b7280;--light-border:rgba(255,255,255,0.08)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--off-white);color:var(--navy);overflow-x:hidden}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;height:72px;background:rgba(20,30,47,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--light-border)}
+    .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;z-index:101}
+    .nav-logo img{height:46px;width:auto}
+    .nav-links{display:flex;gap:28px;list-style:none}
+    .nav-links a{color:rgba(255,255,255,0.78);text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover{color:var(--amber)}
+    .nav-cta{background:var(--green);color:#fff!important;padding:9px 22px;border-radius:4px;transition:background 0.2s!important}
+    .nav-cta:hover{background:var(--green-light)!important}
+    .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;z-index:101;background:none;border:none;padding:8px;margin-right:-8px}
+    .hamburger span{width:24px;height:2px;background:#fff;display:block;transition:transform 0.3s,opacity 0.3s;transform-origin:center}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;bottom:0;background:var(--navy-deep);z-index:99;flex-direction:column;padding:32px 6vw 40px;overflow-y:auto;transform:translateX(100%);transition:transform 0.35s cubic-bezier(0.4,0,0.2,1)}
+    .mobile-menu.open{transform:translateX(0)}
+    .mobile-menu a{display:block;color:rgba(255,255,255,0.85);text-decoration:none;font-size:1.4rem;font-weight:600;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.07);transition:color 0.2s}
+    .mobile-menu a:hover{color:var(--amber)}
+    .mobile-menu a.mobile-cta{margin-top:28px;border:none;background:var(--green);color:#fff;text-align:center;border-radius:8px;padding:18px;font-size:1.1rem}
+    .mobile-menu .mobile-phone{margin-top:24px;color:rgba(255,255,255,0.5);font-size:0.9rem;border-bottom:none;padding:0}
+    .mobile-menu .mobile-phone a{font-size:1.1rem;color:var(--amber);border-bottom:none;display:inline}
+
+    .page-hero{background:linear-gradient(135deg,var(--navy-deep),var(--navy) 60%,#1a3a4a);padding:140px 6vw 60px;position:relative;overflow:hidden}
+    .page-hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+    .page-hero-inner{position:relative;z-index:2;max-width:720px}
+    .breadcrumb{font-size:0.78rem;color:rgba(255,255,255,0.45);margin-bottom:18px}
+    .breadcrumb a{color:rgba(255,255,255,0.45);text-decoration:none}
+    .breadcrumb a:hover{color:var(--amber)}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,3rem);color:#fff;line-height:1.2;margin-bottom:14px}
+    .page-hero p{font-size:0.92rem;color:rgba(255,255,255,0.55);font-weight:300}
+
+    .policy-body{max-width:780px;margin:0 auto;padding:72px 6vw 80px;background:var(--off-white)}
+    .policy-updated{display:inline-block;background:rgba(74,158,63,0.1);border:1px solid rgba(74,158,63,0.25);color:var(--green);font-size:0.78rem;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:40px}
+
+    .policy-body h2{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--navy);margin:40px 0 14px;padding-top:8px;border-top:1px solid #e5e9ee}
+    .policy-body h2:first-of-type{margin-top:0;border-top:none;padding-top:0}
+    .policy-body p{font-size:0.93rem;color:#4a5568;line-height:1.8;font-weight:300;margin-bottom:16px}
+    .policy-body p:last-child{margin-bottom:0}
+    .policy-body ul{margin:12px 0 16px 0;padding-left:0;list-style:none}
+    .policy-body ul li{font-size:0.93rem;color:#4a5568;line-height:1.7;font-weight:300;padding:5px 0 5px 22px;position:relative}
+    .policy-body ul li::before{content:'–';position:absolute;left:0;color:var(--green);font-weight:600}
+    .policy-body a{color:var(--green);text-decoration:underline}
+    .policy-body a:hover{color:var(--green-light)}
+    .policy-contact-box{background:#fff;border:1px solid #e5e9ee;border-radius:10px;padding:24px 28px;margin-top:32px}
+    .policy-contact-box h3{font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:10px}
+    .policy-contact-box p{font-size:0.9rem;color:var(--mid-grey);font-weight:300;line-height:1.7;margin-bottom:6px}
+
+    footer{background:var(--navy-deep);color:rgba(255,255,255,0.55);padding:48px 6vw 28px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px}
+    .footer-brand img{height:52px;margin-bottom:14px;display:block}
+    .footer-brand p{font-size:0.85rem;line-height:1.7;font-weight:300;max-width:280px}
+    .footer-col h4{font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-bottom:14px}
+    .footer-col a{display:block;color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.87rem;margin-bottom:8px;transition:color 0.2s}
+    .footer-col a:hover{color:var(--amber)}
+    .footer-col p{font-size:0.87rem;line-height:1.7}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:22px;display:flex;justify-content:space-between;font-size:0.78rem;flex-wrap:wrap;gap:10px}
+    .footer-bottom a{color:rgba(255,255,255,0.4);text-decoration:none}
+    .footer-bottom a:hover{color:var(--amber)}
+
+    @media(max-width:900px){.nav-links{display:none}.hamburger{display:flex}.mobile-menu{display:flex}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
+    @media(max-width:600px){nav{padding:0 5vw;height:64px}.nav-logo img{height:40px}.mobile-menu{top:64px}.page-hero{padding:88px 5vw 48px}.policy-body{padding:48px 5vw 64px}.footer-grid{grid-template-columns:1fr;gap:24px}.footer-brand{grid-column:auto}footer{padding:36px 5vw 20px}.footer-bottom{flex-direction:column;text-align:center;gap:6px}}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="https://www.dropbox.com/scl/fi/dybbf43rt3a0gb7jxwgl4/SAS-Home-Energy-logo-design-1.png?rlkey=93v1pexz0c1an2e80ktc2iy7s&st=g7nm3pd9&dl=1" alt="SAS Home Energy" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contactus.html">Contact</a></li>
+      <li><a href="contactus.html" class="nav-cta">Book Now</a></li>
+    </ul>
+    <button class="hamburger" id="menuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contactus.html">Contact</a>
+    <a href="contactus.html" class="mobile-cta">Book an Assessment</a>
+    <p class="mobile-phone">Call us: <a href="tel:07480839113">07480 839113</a></p>
+  </div>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Privacy Policy</div>
+      <h1>Privacy Policy</h1>
+      <p>Last updated: January 2026</p>
+    </div>
+  </div>
+
+  <div class="policy-body">
+    <span class="policy-updated">Last updated: January 2026</span>
+
+    <h2>1. Who We Are</h2>
+    <p>SAS Home Energy ("we", "us", "our") is a domestic energy assessment company operating across the United Kingdom. We are the data controller responsible for your personal information collected through this website and in connection with our services.</p>
+    <p>If you have any questions about this policy or how we handle your data, please contact us at <a href="tel:07480839113">07480 839113</a>.</p>
+
+    <h2>2. What Information We Collect</h2>
+    <p>We may collect the following personal information when you use our website or contact us:</p>
+    <ul>
+      <li>Your name and contact details (email address, phone number)</li>
+      <li>Your property address and postcode</li>
+      <li>Details about your property relevant to the assessment</li>
+      <li>Correspondence you send to us, including via the contact form</li>
+      <li>Technical data such as your IP address and browser type (collected automatically when you visit our website)</li>
+    </ul>
+
+    <h2>3. How We Use Your Information</h2>
+    <p>We use your personal data for the following purposes:</p>
+    <ul>
+      <li>To respond to your enquiries and arrange your energy assessment</li>
+      <li>To carry out and deliver Energy Performance Certificates and other assessments</li>
+      <li>To lodge your certificate on the national EPC register as required by law</li>
+      <li>To send you your certificate and any supporting documentation</li>
+      <li>To improve our website and services</li>
+      <li>To comply with legal obligations, including those relating to energy assessment accreditation</li>
+    </ul>
+
+    <h2>4. Legal Basis for Processing</h2>
+    <p>We process your personal data on the following legal grounds under UK GDPR:</p>
+    <ul>
+      <li><strong>Contract performance</strong> — processing is necessary to carry out the services you have requested</li>
+      <li><strong>Legal obligation</strong> — we are required to lodge EPCs on the national register under the Energy Performance of Buildings Regulations</li>
+      <li><strong>Legitimate interests</strong> — to respond to your enquiries and improve our services</li>
+      <li><strong>Consent</strong> — where you have explicitly provided consent, for example when subscribing to any communications</li>
+    </ul>
+
+    <h2>5. How Long We Keep Your Data</h2>
+    <p>We retain your personal information for as long as is necessary to fulfil the purposes for which it was collected, including for the purposes of satisfying any legal, accounting or reporting requirements.</p>
+    <p>EPC records are lodged on the national register and are retained in accordance with government requirements (typically for the life of the certificate — 10 years). Our own records relating to completed assessments are retained for up to 6 years for insurance and compliance purposes.</p>
+    <p>Enquiry data where no assessment was carried out is deleted within 12 months.</p>
+
+    <h2>6. Who We Share Your Data With</h2>
+    <p>We do not sell or rent your personal data to third parties. We may share your information in the following limited circumstances:</p>
+    <ul>
+      <li><strong>National EPC Register</strong> — your certificate data is lodged as required by law</li>
+      <li><strong>Accreditation bodies</strong> — we may be required to share assessment records with Elmhurst Energy or other accreditation bodies for audit and compliance purposes</li>
+      <li><strong>Legal requirements</strong> — where we are required to disclose information by law, court order or regulatory authority</li>
+    </ul>
+
+    <h2>7. Your Rights</h2>
+    <p>Under UK GDPR, you have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Right of access</strong> — you can request a copy of the personal data we hold about you</li>
+      <li><strong>Right to rectification</strong> — you can ask us to correct inaccurate or incomplete data</li>
+      <li><strong>Right to erasure</strong> — you can ask us to delete your data in certain circumstances</li>
+      <li><strong>Right to restrict processing</strong> — you can ask us to limit how we use your data</li>
+      <li><strong>Right to data portability</strong> — you can request your data in a structured, machine-readable format</li>
+      <li><strong>Right to object</strong> — you can object to processing based on legitimate interests</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us using the details below. We will respond within 30 days.</p>
+
+    <h2>8. Cookies</h2>
+    <p>Our website uses only essential technical cookies necessary for the site to function. We do not use advertising, tracking or analytics cookies. No cookie consent banner is required as we do not set non-essential cookies.</p>
+
+    <h2>9. Security</h2>
+    <p>We take reasonable technical and organisational measures to protect your personal information against unauthorised access, loss or misuse. Our website is hosted via GitHub Pages and data submitted through our contact form is transmitted securely.</p>
+
+    <h2>10. Links to Other Websites</h2>
+    <p>Our website may contain links to third-party websites such as Elmhurst Energy or TrustMark. We are not responsible for the privacy practices of those sites and encourage you to read their privacy policies separately.</p>
+
+    <h2>11. Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically.</p>
+
+    <h2>12. Complaints</h2>
+    <p>If you are unhappy with how we have handled your personal data, you have the right to lodge a complaint with the Information Commissioner's Office (ICO), the UK's data protection regulator. You can contact the ICO at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a> or by calling 0303 123 1113.</p>
+
+    <div class="policy-contact-box">
+      <h3>Contact Us About Your Data</h3>
+      <p>SAS Home Energy</p>
+      <p>📞 <a href="tel:07480839113">07480 839113</a></p>
+      <p>Available Monday–Saturday, 9am–8pm. Sunday by appointment.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://www.dropbox.com/scl/fi/dybbf43rt3a0gb7jxwgl4/SAS-Home-Energy-logo-design-1.png?rlkey=93v1pexz0c1an2e80ktc2iy7s&st=g7nm3pd9&dl=1" alt="SAS Home Energy" />
+        <p>Qualified Domestic Energy Assessors providing Energy Performance Certificates and retrofit assessments across the UK.</p>
+      </div>
+      <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="aboutus.html">About Us</a><a href="pricing.html">Pricing</a><a href="contactus.html">Contact</a></div>
+      <div class="footer-col"><h4>Contact</h4><p>📞 <a href="tel:07480839113" style="color:rgba(255,255,255,.5);text-decoration:none">07480 839113</a></p><p style="margin-top:8px">Mon–Sat: 9am – 8pm</p><p>Sunday: By Appointment</p></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SAS Home Energy. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; Accredited Domestic Energy Assessors · UK Nationwide</span>
+    </div>
+  </footer>
+  <script>
+    const btn=document.getElementById('menuBtn'),menu=document.getElementById('mobileMenu');
+    btn.addEventListener('click',()=>{const o=menu.classList.toggle('open');btn.classList.toggle('open',o);document.body.style.overflow=o?'hidden':''});
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');btn.classList.remove('open');document.body.style.overflow=''}));
+  </script>
+</body>
+</html>
