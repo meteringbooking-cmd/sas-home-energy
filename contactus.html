@@ -10,29 +10,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --navy:   #1e2d45;
-      --navy-deep: #141e2f;
-      --green:  #4a9e3f;
-      --green-light: #5cba50;
-      --teal:   #1e7a8c;
-      --amber:  #f5a623;
-      --off-white: #f7f8f5;
-      --mid-grey: #6b7280;
+      --navy:       #1e2d45;
+      --navy-deep:  #141e2f;
+      --green:      #4a9e3f;
+      --green-light:#5cba50;
+      --teal:       #1e7a8c;
+      --amber:      #f5a623;
+      --off-white:  #f7f8f5;
+      --mid-grey:   #6b7280;
       --light-border: rgba(255,255,255,0.08);
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--off-white); color: var(--navy); overflow-x: hidden; }
 
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 6vw; height: 72px;
-      background: rgba(20, 30, 47, 0.96);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--light-border);
-    }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 6vw; height: 72px; background: rgba(20,30,47,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--light-border); }
     .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .nav-logo img { height: 46px; }
     .nav-links { display: flex; gap: 36px; list-style: none; }
@@ -43,17 +35,8 @@
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
     .hamburger span { width: 24px; height: 2px; background: #fff; display: block; }
 
-    /* PAGE HERO */
-    .page-hero {
-      background: linear-gradient(135deg, var(--navy-deep), var(--navy) 60%, #1a3a4a);
-      padding: 140px 6vw 80px;
-      position: relative; overflow: hidden;
-    }
-    .page-hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
+    .page-hero { background: linear-gradient(135deg, var(--navy-deep), var(--navy) 60%, #1a3a4a); padding: 140px 6vw 80px; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
     .page-hero-inner { position: relative; z-index: 2; max-width: 620px; }
     .breadcrumb { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-bottom: 18px; letter-spacing: 0.05em; }
     .breadcrumb a { color: rgba(255,255,255,0.45); text-decoration: none; }
@@ -61,121 +44,53 @@
     .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4.5vw, 3.2rem); color: #fff; line-height: 1.2; margin-bottom: 18px; }
     .page-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.68); line-height: 1.78; font-weight: 300; }
 
-    /* CONTACT SECTION */
     .contact-section { padding: 80px 6vw; background: #fff; }
     .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start; }
 
-    /* INFO PANEL */
     .info-panel { display: flex; flex-direction: column; gap: 0; }
-    .info-card {
-      background: var(--off-white);
-      border-radius: 12px;
-      padding: 28px;
-      margin-bottom: 20px;
-    }
+    .info-card { background: var(--off-white); border-radius: 12px; padding: 28px; margin-bottom: 20px; }
     .info-card:last-child { margin-bottom: 0; }
     .info-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
-    .info-icon {
-      width: 40px; height: 40px;
-      background: linear-gradient(135deg, rgba(74,158,63,0.15), rgba(30,122,140,0.15));
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem;
-    }
+    .info-icon { width: 40px; height: 40px; background: linear-gradient(135deg, rgba(74,158,63,0.15), rgba(30,122,140,0.15)); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
     .info-card h3 { font-weight: 700; font-size: 0.93rem; color: var(--navy); letter-spacing: 0.02em; }
     .info-card p { font-size: 0.88rem; color: var(--mid-grey); line-height: 1.7; font-weight: 300; }
     .info-card a { color: var(--navy); font-weight: 600; text-decoration: none; font-size: 1.05rem; display: block; margin-bottom: 4px; }
     .info-card a:hover { color: var(--green); }
-    .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; }
     .hours-row { display: flex; justify-content: space-between; font-size: 0.86rem; padding: 6px 0; border-bottom: 1px solid rgba(30,45,69,0.07); }
     .hours-row:last-child { border-bottom: none; }
     .hours-day { color: var(--navy); font-weight: 500; }
     .hours-time { color: var(--mid-grey); }
     .available { color: var(--green); font-weight: 600; }
 
-    /* FORM */
-    .form-panel {}
     .form-panel h2 { font-family: 'Playfair Display', serif; font-size: 1.9rem; color: var(--navy); margin-bottom: 8px; }
     .form-panel > p { font-size: 0.93rem; color: var(--mid-grey); margin-bottom: 32px; font-weight: 300; line-height: 1.6; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
     .form-group { display: flex; flex-direction: column; margin-bottom: 18px; }
     .form-group label { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--navy); margin-bottom: 7px; }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      border: 1.5px solid #d5dae2;
-      border-radius: 7px;
-      padding: 13px 16px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.93rem;
-      color: var(--navy);
-      background: #fff;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      outline: none;
-      appearance: none;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--green);
-      box-shadow: 0 0 0 3px rgba(74,158,63,0.1);
-    }
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: #aab0bb; }
+    .form-group input, .form-group select, .form-group textarea { border: 1.5px solid #d5dae2; border-radius: 7px; padding: 13px 16px; font-family: 'DM Sans', sans-serif; font-size: 0.93rem; color: var(--navy); background: #fff; transition: border-color 0.2s, box-shadow 0.2s; outline: none; appearance: none; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(74,158,63,0.1); }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: #aab0bb; }
     .form-group textarea { resize: vertical; min-height: 130px; }
     .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; cursor: pointer; }
     .form-note { font-size: 0.82rem; color: var(--mid-grey); margin-bottom: 24px; font-weight: 300; line-height: 1.55; }
-    .btn-submit {
-      background: var(--green);
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      padding: 15px 36px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.97rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background 0.25s, transform 0.2s;
-      display: inline-flex; align-items: center; gap: 8px;
-      width: 100%;
-      justify-content: center;
-    }
+    .btn-submit { background: var(--green); color: #fff; border: none; border-radius: 6px; padding: 15px 36px; font-family: 'DM Sans', sans-serif; font-size: 0.97rem; font-weight: 700; cursor: pointer; transition: background 0.25s, transform 0.2s; display: inline-flex; align-items: center; gap: 8px; width: 100%; justify-content: center; }
     .btn-submit:hover { background: var(--green-light); transform: translateY(-1px); }
 
-    /* SUCCESS */
-    .success-message {
-      display: none;
-      background: rgba(74,158,63,0.08);
-      border: 1px solid rgba(74,158,63,0.3);
-      border-radius: 10px;
-      padding: 24px;
-      text-align: center;
-      margin-top: 20px;
-    }
+    .success-message { display: none; background: rgba(74,158,63,0.08); border: 1px solid rgba(74,158,63,0.3); border-radius: 10px; padding: 24px; text-align: center; margin-top: 20px; }
     .success-message.show { display: block; }
     .success-message h4 { color: var(--green); font-weight: 700; margin-bottom: 6px; }
     .success-message p { font-size: 0.88rem; color: var(--mid-grey); }
 
-    /* FAQ */
     .faq-section { padding: 80px 6vw; background: var(--off-white); }
     .faq-header { text-align: center; margin-bottom: 48px; }
     .section-eyebrow { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
     .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 3vw, 2.4rem); color: var(--navy); line-height: 1.28; margin-bottom: 14px; }
     .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; max-width: 1000px; margin: 0 auto; }
-    .faq-item {
-      background: #fff;
-      border: 1px solid #e5e9ee;
-      border-radius: 10px;
-      padding: 24px;
-      cursor: pointer;
-      transition: box-shadow 0.2s;
-    }
+    .faq-item { background: #fff; border: 1px solid #e5e9ee; border-radius: 10px; padding: 24px; transition: box-shadow 0.2s; }
     .faq-item:hover { box-shadow: 0 6px 24px rgba(30,45,69,0.08); }
-    .faq-q { font-weight: 700; font-size: 0.93rem; color: var(--navy); margin-bottom: 10px; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
-    .faq-toggle { font-size: 1.1rem; color: var(--green); flex-shrink: 0; line-height: 1; }
+    .faq-q { font-weight: 700; font-size: 0.93rem; color: var(--navy); margin-bottom: 10px; }
     .faq-a { font-size: 0.86rem; color: var(--mid-grey); line-height: 1.7; font-weight: 300; }
 
-    /* FOOTER */
     footer { background: var(--navy-deep); color: rgba(255,255,255,0.55); padding: 48px 6vw 28px; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 36px; }
     .footer-brand img { height: 52px; margin-bottom: 14px; display: block; }
@@ -186,24 +101,15 @@
     .footer-col p { font-size: 0.87rem; line-height: 1.7; }
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 22px; display: flex; justify-content: space-between; font-size: 0.78rem; flex-wrap: wrap; gap: 10px; }
 
-    @media (max-width: 900px) {
-      .contact-grid { grid-template-columns: 1fr; }
-      .faq-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 600px) {
-      .form-row { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .footer-grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } .faq-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .nav-links { display: none; } .hamburger { display: flex; } .footer-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
 
   <nav>
     <a href="index.html" class="nav-logo">
-      <img src="SAS_Home_Energy_logo_design.png" alt="SAS Home Energy" />
+      <img src="https://www.dropbox.com/scl/fi/dys7scwnfdp3gxgy7i458/SAS-Home-Energy-logo-design.png?rlkey=0vcqq95tczcvyu9as1pag1jvm&st=t8mrx1nn&dl=1" alt="SAS Home Energy" />
     </a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -214,7 +120,6 @@
     <div class="hamburger"><span></span><span></span><span></span></div>
   </nav>
 
-  <!-- PAGE HERO -->
   <div class="page-hero">
     <div class="page-hero-inner">
       <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Contact Us</div>
@@ -223,88 +128,51 @@
     </div>
   </div>
 
-  <!-- CONTACT -->
   <section class="contact-section">
     <div class="contact-grid">
-
-      <!-- INFO -->
       <div class="info-panel">
         <div class="info-card">
-          <div class="info-card-header">
-            <div class="info-icon">📞</div>
-            <h3>Call Us Directly</h3>
-          </div>
+          <div class="info-card-header"><div class="info-icon">📞</div><h3>Call Us Directly</h3></div>
           <a href="tel:07480839113">07480 839113</a>
           <p>Speak with one of our assessors for advice, quotes, or to book an appointment straight away.</p>
         </div>
-
         <div class="info-card">
-          <div class="info-card-header">
-            <div class="info-icon">🕐</div>
-            <h3>Opening Hours</h3>
-          </div>
-          <div class="hours-grid">
-            <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time available">9:00am – 8:00pm</span></div>
-            <div class="hours-row"><span class="hours-day">Tuesday</span><span class="hours-time available">9:00am – 8:00pm</span></div>
-            <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time available">9:00am – 8:00pm</span></div>
-            <div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time available">9:00am – 8:00pm</span></div>
-            <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time available">9:00am – 8:00pm</span></div>
-            <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time available">9:00am – 8:00pm</span></div>
-            <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time" style="color:var(--amber);font-weight:600">By Appointment</span></div>
-          </div>
+          <div class="info-card-header"><div class="info-icon">🕐</div><h3>Opening Hours</h3></div>
+          <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time available">9:00am – 8:00pm</span></div>
+          <div class="hours-row"><span class="hours-day">Tuesday</span><span class="hours-time available">9:00am – 8:00pm</span></div>
+          <div class="hours-row"><span class="hours-day">Wednesday</span><span class="hours-time available">9:00am – 8:00pm</span></div>
+          <div class="hours-row"><span class="hours-day">Thursday</span><span class="hours-time available">9:00am – 8:00pm</span></div>
+          <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time available">9:00am – 8:00pm</span></div>
+          <div class="hours-row"><span class="hours-day">Saturday</span><span class="hours-time available">9:00am – 8:00pm</span></div>
+          <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time" style="color:var(--amber);font-weight:600">By Appointment</span></div>
         </div>
-
         <div class="info-card">
-          <div class="info-card-header">
-            <div class="info-icon">📍</div>
-            <h3>Coverage Area</h3>
-          </div>
+          <div class="info-card-header"><div class="info-icon">📍</div><h3>Coverage Area</h3></div>
           <p>We cover properties across the <strong>UK</strong> — England, Wales, and Scotland. Urban or rural, traditional or modern, we'll come to you.</p>
         </div>
-
         <div class="info-card">
-          <div class="info-card-header">
-            <div class="info-icon">⚡</div>
-            <h3>Fast Response</h3>
-          </div>
+          <div class="info-card-header"><div class="info-icon">⚡</div><h3>Fast Response</h3></div>
           <p>We aim to respond to all online enquiries within a few hours during opening hours. For urgent requests, please call us directly.</p>
         </div>
       </div>
 
-      <!-- FORM -->
       <div class="form-panel">
         <h2>Send Us an Enquiry</h2>
         <p>Tell us a little about your property and what you need — we'll get back to you promptly with a quote or to arrange your assessment.</p>
-
         <div id="contactForm">
           <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First Name *</label>
-              <input type="text" id="firstName" placeholder="e.g. James" required />
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name *</label>
-              <input type="text" id="lastName" placeholder="e.g. Smith" required />
-            </div>
+            <div class="form-group"><label for="firstName">First Name *</label><input type="text" id="firstName" placeholder="e.g. James" /></div>
+            <div class="form-group"><label for="lastName">Last Name *</label><input type="text" id="lastName" placeholder="e.g. Smith" /></div>
           </div>
           <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" placeholder="your@email.com" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" placeholder="07xxx xxxxxx" />
-            </div>
+            <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" placeholder="your@email.com" /></div>
+            <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" placeholder="07xxx xxxxxx" /></div>
           </div>
-          <div class="form-group">
-            <label for="postcode">Property Postcode *</label>
-            <input type="text" id="postcode" placeholder="e.g. SW1A 1AA" required style="max-width:220px" />
-          </div>
+          <div class="form-group"><label for="postcode">Property Postcode *</label><input type="text" id="postcode" placeholder="e.g. SW1A 1AA" style="max-width:220px" /></div>
           <div class="form-row">
             <div class="form-group">
               <label for="serviceType">Service Required *</label>
-              <select id="serviceType" required>
+              <select id="serviceType">
                 <option value="" disabled selected>Please select…</option>
                 <option>Domestic EPC</option>
                 <option>Retrofit Assessment</option>
@@ -329,16 +197,10 @@
               </select>
             </div>
           </div>
-          <div class="form-group">
-            <label for="message">Tell Us About Your Project</label>
-            <textarea id="message" placeholder="Please share any relevant details — the age of the property, any access considerations, your ideal dates, or any questions you have…"></textarea>
-          </div>
+          <div class="form-group"><label for="message">Tell Us About Your Project</label><textarea id="message" placeholder="Please share any relevant details — the age of the property, any access considerations, your ideal dates, or any questions you have…"></textarea></div>
           <p class="form-note">* Required fields. Your information will be used solely to respond to your enquiry and arrange your assessment. We do not share your details with third parties.</p>
-          <button class="btn-submit" onclick="submitForm()">
-            <span>Send Enquiry</span> <span>→</span>
-          </button>
+          <button class="btn-submit" onclick="submitForm()"><span>Send Enquiry</span> <span>→</span></button>
         </div>
-
         <div class="success-message" id="successMsg">
           <h4>✓ Enquiry Received!</h4>
           <p>Thank you for getting in touch. We'll be in contact with you shortly — usually within a few hours during opening hours.</p>
@@ -347,45 +209,25 @@
     </div>
   </section>
 
-  <!-- FAQ -->
   <section class="faq-section">
     <div class="faq-header">
       <div class="section-eyebrow">Common Questions</div>
       <h2 class="section-title">Frequently Asked Questions</h2>
     </div>
     <div class="faq-grid">
-      <div class="faq-item">
-        <div class="faq-q">How long does an EPC survey take? <span class="faq-toggle">+</span></div>
-        <div class="faq-a">Most domestic EPC assessments take between 30 and 60 minutes, depending on the size and complexity of the property. Larger or older properties may take a little longer.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">How quickly will I receive my certificate? <span class="faq-toggle">+</span></div>
-        <div class="faq-a">Your EPC will be lodged on the national register and emailed to you within 24–48 hours of your assessment in the vast majority of cases.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Do I need to be present during the survey? <span class="faq-toggle">+</span></div>
-        <div class="faq-a">Someone over 18 should be present to provide access and accompany the assessor. Agents and property managers can attend on behalf of owners.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">How long is an EPC valid for? <span class="faq-toggle">+</span></div>
-        <div class="faq-a">An Energy Performance Certificate is valid for 10 years. You can check whether a valid EPC already exists for your property on the government's register at epcregister.com.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Can you assess a listed or period property? <span class="faq-toggle">+</span></div>
-        <div class="faq-a">Yes — we specialise in older and traditionally constructed properties. Our assessors are experienced in evaluating solid wall construction, historic glazing, and other heritage features fairly and accurately.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What do I need to have ready for the assessment? <span class="faq-toggle">+</span></div>
-        <div class="faq-a">Access to all rooms and the loft (if applicable) is helpful, along with any documentation about insulation, boiler age, or heating systems. Don't worry if you're unsure — our assessor will guide you through it.</div>
-      </div>
+      <div class="faq-item"><div class="faq-q">How long does an EPC survey take?</div><div class="faq-a">Most domestic EPC assessments take between 30 and 60 minutes, depending on the size and complexity of the property. Larger or older properties may take a little longer.</div></div>
+      <div class="faq-item"><div class="faq-q">How quickly will I receive my certificate?</div><div class="faq-a">Your EPC will be lodged on the national register and emailed to you within 24–48 hours of your assessment in the vast majority of cases.</div></div>
+      <div class="faq-item"><div class="faq-q">Do I need to be present during the survey?</div><div class="faq-a">Someone over 18 should be present to provide access and accompany the assessor. Agents and property managers can attend on behalf of owners.</div></div>
+      <div class="faq-item"><div class="faq-q">How long is an EPC valid for?</div><div class="faq-a">An Energy Performance Certificate is valid for 10 years. You can check whether a valid EPC already exists for your property on the government's register at epcregister.com.</div></div>
+      <div class="faq-item"><div class="faq-q">Can you assess a listed or period property?</div><div class="faq-a">Yes — we specialise in older and traditionally constructed properties. Our assessors are experienced in evaluating solid wall construction, historic glazing, and other heritage features fairly and accurately.</div></div>
+      <div class="faq-item"><div class="faq-q">What do I need to have ready for the assessment?</div><div class="faq-a">Access to all rooms and the loft (if applicable) is helpful, along with any documentation about insulation, boiler age, or heating systems. Don't worry if you're unsure — our assessor will guide you through it.</div></div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="SAS_Home_Energy_logo_design.png" alt="SAS Home Energy" />
+        <img src="https://www.dropbox.com/scl/fi/dys7scwnfdp3gxgy7i458/SAS-Home-Energy-logo-design.png?rlkey=0vcqq95tczcvyu9as1pag1jvm&st=t8mrx1nn&dl=1" alt="SAS Home Energy" />
         <p>Qualified Domestic Energy Assessors providing Energy Performance Certificates and retrofit assessments across the UK.</p>
       </div>
       <div class="footer-col">
