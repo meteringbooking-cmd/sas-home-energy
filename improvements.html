@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Energy Improvements | Loft Insulation, Heating & Solar | SAS Home Energy</title>
-  <meta name="description" content="Improve your EPC rating and reduce energy bills with loft insulation, heating upgrades and solar panel installations. Expert advice from SAS Home Energy." />
+  <title>Energy Improvements | Insulation, Heating, Solar & Ventilation | SAS Home Energy</title>
+  <meta name="description" content="Improve your EPC rating with loft insulation, heating upgrades, solar panels and ventilation solutions. Essential for landlords under new UK regulations. Expert advice from SAS Home Energy." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -110,6 +110,7 @@
     .visual-solar { background:linear-gradient(145deg,#2d2a1a,#8a6a1a); }
     .visual-walls { background:linear-gradient(145deg,#1e2d45,#3a4d6b); }
     .visual-windows { background:linear-gradient(145deg,#1a3a4a,#1e7a8c); }
+    .visual-ventilation { background:linear-gradient(145deg,#1a2a3a,#0e5c6e); }
     .visual-icon { font-size:3.5rem; margin-bottom:16px; }
     .visual-title { font-family:'Playfair Display',serif; font-size:1.5rem; margin-bottom:10px; }
     .visual-sub { font-size:0.88rem; color:rgba(255,255,255,0.65); font-weight:300; line-height:1.6; margin-bottom:24px; }
@@ -188,7 +189,7 @@
     @media(max-width:900px) {
       .nav-links { display:none; } .hamburger { display:flex; } .mobile-menu { display:flex; }
       .page-hero { padding:110px 6vw 60px; }
-      .intro-strip-inner { grid-template-columns:1fr 1fr 1fr; }
+      .intro-strip-inner { grid-template-columns:1fr 1fr !important; gap:0; }
       .improvement-grid, .improvement-grid.reverse { grid-template-columns:1fr; gap:36px; direction:ltr; }
       .grants-grid { grid-template-columns:1fr 1fr; }
       .connects-steps { grid-template-columns:1fr 1fr; gap:36px; }
@@ -202,8 +203,9 @@
       nav { padding:0 5vw; height:64px; } .nav-logo img { height:40px; } .mobile-menu { top:64px; }
       .page-hero { padding:88px 5vw 48px; }
       .page-hero h1 { font-size:clamp(1.7rem,7.5vw,2.2rem); }
-      .intro-strip-inner { grid-template-columns:1fr 1fr; }
-      .intro-stat:nth-child(3) { grid-column:1/-1; border-right:none; border-top:1px solid rgba(255,255,255,0.08); }
+      .intro-strip-inner { grid-template-columns:1fr 1fr !important; }
+      .intro-stat:nth-child(3), .intro-stat:nth-child(4) { border-right:none; border-top:1px solid rgba(255,255,255,0.08); }
+      .intro-stat:nth-child(2) { border-right:none; }
       section { padding:52px 5vw; }
       .improvement-visual-inner { padding:28px 22px; min-height:260px; }
       .grants-grid { grid-template-columns:1fr; }
@@ -258,13 +260,14 @@
         <span class="hero-badge">☀️ Solar Installations</span>
         <span class="hero-badge">🧱 Wall Insulation</span>
         <span class="hero-badge">🪟 Glazing</span>
+        <span class="hero-badge">💨 Ventilation</span>
       </div>
     </div>
   </div>
 
   <!-- INTRO STATS -->
   <div class="intro-strip">
-    <div class="intro-strip-inner">
+    <div class="intro-strip-inner" style="grid-template-columns:repeat(4,1fr)">
       <div class="intro-stat">
         <div class="intro-stat-num">£690</div>
         <div class="intro-stat-label">Average annual saving from loft insulation in an uninsulated home</div>
@@ -276,6 +279,10 @@
       <div class="intro-stat">
         <div class="intro-stat-num">£3,000+</div>
         <div class="intro-stat-label">Potential uplift in property value per EPC band improvement</div>
+      </div>
+      <div class="intro-stat">
+        <div class="intro-stat-num">2024</div>
+        <div class="intro-stat-label">Awaab's Law in force — landlords legally required to address damp &amp; mould</div>
       </div>
     </div>
   </div>
@@ -484,6 +491,62 @@
     </div>
   </section>
 
+  <!-- GLAZING ends here -->
+
+  <!-- VENTILATION -->
+  <section class="improvement alt" id="ventilation">
+    <div class="improvement-grid reverse">
+      <div class="improvement-visual">
+        <div class="improvement-visual-inner visual-ventilation">
+          <div>
+            <div class="visual-icon">💨</div>
+            <div class="visual-title">Ventilation</div>
+            <div class="visual-sub">As homes become better insulated, ventilation becomes critical. Without adequate airflow, moisture builds up — causing condensation, damp, and mould that can seriously harm health and trigger legal action for landlords.</div>
+          </div>
+          <div>
+            <div style="font-size:0.72rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px">Legal &amp; Health Risk</div>
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <div style="background:rgba(233,21,59,0.25);border:1px solid rgba(233,21,59,0.4);border-radius:6px;padding:6px 12px;font-size:0.78rem;color:#fff;font-weight:600">⚠️ Awaab's Law</div>
+              <div style="background:rgba(245,166,35,0.2);border:1px solid rgba(245,166,35,0.35);border-radius:6px;padding:6px 12px;font-size:0.78rem;color:#fff;font-weight:600">🏠 HHSRS Hazard</div>
+              <div style="background:rgba(74,158,63,0.2);border:1px solid rgba(74,158,63,0.35);border-radius:6px;padding:6px 12px;font-size:0.78rem;color:#fff;font-weight:600">✓ EPC Compliant</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="improvement-content">
+        <div class="improvement-tag" style="background:rgba(233,21,59,0.1);border-color:rgba(233,21,59,0.3);color:#c0392b">⚠️ Critical for Landlords</div>
+        <h2>Ventilation &amp; Air Quality</h2>
+
+        <!-- Awaab's Law callout box -->
+        <div style="background:rgba(233,21,59,0.06);border:1px solid rgba(233,21,59,0.2);border-radius:10px;padding:18px 20px;margin-bottom:22px">
+          <div style="font-weight:700;color:#c0392b;font-size:0.88rem;margin-bottom:6px">⚠️ Awaab's Law &amp; the Renters' Rights Act</div>
+          <p style="font-size:0.85rem;color:var(--mid-grey);line-height:1.65;font-weight:300;margin-bottom:0">Awaab's Law — named after two-year-old Awaab Ishak who died from prolonged exposure to mould — came into force for social housing in 2024 and is being extended to the private rented sector. Landlords will be legally required to investigate and resolve damp and mould hazards within strict timeframes. Adequate ventilation is the most effective preventative measure.</p>
+        </div>
+
+        <p>As modern insulation and draught-proofing reduce natural air infiltration, controlled ventilation becomes essential. A well-ventilated home removes moisture-laden air from kitchens and bathrooms before it can condense on cold surfaces — preventing the damp and mould that damages property and harms occupant health.</p>
+        <p>Our assessors assess your current ventilation provision as part of a full energy assessment and identify gaps — from missing window trickle vents to inadequate extraction in bathrooms and kitchens.</p>
+        <ul class="benefit-list">
+          <li><strong>Trickle vents in windows</strong> — passive background ventilation that maintains continuous fresh air without draughts or heat loss; often missing in older replacement windows</li>
+          <li><strong>Bathroom extraction fans</strong> — removes humid air at source; intermittent fans activate with the light, continuous fans run at low speed with boost mode</li>
+          <li><strong>Kitchen extraction</strong> — cooker hoods and extractor fans prevent cooking moisture from migrating through the property</li>
+          <li><strong>Mechanical Ventilation with Heat Recovery (MVHR)</strong> — whole-house system that continuously exchanges stale air for fresh air while recovering up to 90% of the heat; ideal for highly insulated new builds and retrofits</li>
+          <li><strong>Positive Input Ventilation (PIV)</strong> — loft-mounted unit that gently pressurises the dwelling with fresh, filtered air; highly effective for condensation problems in existing homes</li>
+          <li><strong>Damp and mould assessment</strong> — we can identify the root cause of moisture problems and recommend the correct ventilation solution</li>
+        </ul>
+
+        <!-- Landlord urgency box -->
+        <div style="background:rgba(30,45,69,0.05);border:1px solid #e0e4ea;border-radius:10px;padding:18px 20px;margin-bottom:24px">
+          <div style="font-weight:700;color:var(--navy);font-size:0.88rem;margin-bottom:8px">🏠 What Landlords Need to Know</div>
+          <p style="font-size:0.85rem;color:var(--mid-grey);line-height:1.65;font-weight:300;margin-bottom:8px">Under the Housing Health and Safety Rating System (HHSRS), damp and mould is already classified as a Category 1 hazard — the most serious. Landlords with inadequately ventilated properties face improvement notices, fines, and rent repayment orders. Awaab's Law will tighten timescales further for both social and private landlords.</p>
+          <p style="font-size:0.85rem;color:var(--mid-grey);line-height:1.65;font-weight:300;margin-bottom:0">A retrofit assessment or EPC from SAS Home Energy will flag ventilation deficiencies and provide the documented evidence base you need to demonstrate compliance and prioritise works.</p>
+        </div>
+
+        <a href="contactus.html" class="btn-primary">Book an Assessment</a>
+        <a href="#grants" class="btn-outline-dark">Check Grant Eligibility</a>
+      </div>
+    </div>
+  </section>
+
   <!-- GRANTS -->
   <section class="grants" id="grants">
     <div class="grants-header">
@@ -521,6 +584,12 @@
         <h3>Local Authority Flex (LAF)</h3>
         <p>Local councils can use ECO4 funding to support households not meeting standard criteria. Coverage varies by area — your assessor can advise on eligibility in your region.</p>
         <span class="grant-tag">Various Measures</span>
+      </div>
+      <div class="grant-card">
+        <div class="grant-icon">💨</div>
+        <h3>Ventilation &amp; Damp Remediation</h3>
+        <p>ECO4 and Local Authority Flex funding can cover ventilation improvements for eligible households where damp and mould is linked to inadequate air circulation. A documented assessment is typically required.</p>
+        <span class="grant-tag">Ventilation</span>
       </div>
       <div class="grant-card">
         <div class="grant-icon">🏦</div>
