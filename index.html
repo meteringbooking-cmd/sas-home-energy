@@ -24,27 +24,32 @@
     html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; background: var(--off-white); color: var(--navy); overflow-x: hidden; }
 
-    /* ══ SPLASH INTRO ══ */
+    /* ══ SPLASH INTRO ══
+       Timeline:
+         0.30s  logo fades/scales in        (duration 0.65s → fully visible at ~0.95s)
+         0.95s  logo holds for 2 seconds
+         2.95s  logo flies to nav position  (duration 0.75s → lands at ~3.70s)
+         3.70s  nav logo snaps visible
+         3.75s  overlay fades out           (duration 0.45s)
+         4.20s  hero content fades up
+    */
     #splash {
       position: fixed; inset: 0; z-index: 9999;
       background: var(--navy-deep);
       display: flex; align-items: center; justify-content: center;
       pointer-events: none;
-      /* fade out the overlay after animation */
-      animation: splashOverlayFade 0.45s ease 2.2s forwards;
+      animation: splashOverlayFade 0.45s ease 3.75s forwards;
     }
     #splash-logo {
       width: 280px;
-      /* 1) fade in at centre */
       animation:
         splashAppear 0.65s cubic-bezier(0.22,1,0.36,1) 0.3s both,
-        splashFly    0.75s cubic-bezier(0.76, 0, 0.24, 1) 1.55s forwards;
+        splashFly    0.75s cubic-bezier(0.76, 0, 0.24, 1) 2.95s forwards;
     }
     @keyframes splashAppear {
       from { opacity: 0; transform: scale(0.82); }
       to   { opacity: 1; transform: scale(1); }
     }
-    /* Fly top-left: offset from viewport centre to nav logo position (~62px from left, 36px from top) */
     @keyframes splashFly {
       from { transform: translate(0, 0) scale(1); opacity: 1; }
       to   { transform: translate(calc(-50vw + 62px), calc(-50vh + 36px)) scale(0.165); opacity: 1; }
@@ -54,10 +59,10 @@
       to   { opacity: 0; visibility: hidden; }
     }
 
-    /* NAV logo hidden until splash lands */
+    /* Nav logo hidden until splash has landed */
     .nav-logo img {
       opacity: 0;
-      animation: logoReveal 0.01s linear 2.3s forwards;
+      animation: logoReveal 0.01s linear 3.70s forwards;
     }
     @keyframes logoReveal { to { opacity: 1; } }
 
@@ -92,7 +97,7 @@
       content: ''; position: absolute; inset: 0;
       background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
-    .hero-content { position: relative; z-index: 2; max-width: 660px; animation: fadeUp 0.9s ease 2.5s both; }
+    .hero-content { position: relative; z-index: 2; max-width: 660px; animation: fadeUp 0.9s ease 4.2s both; }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
       background: rgba(74,158,63,0.18); border: 1px solid rgba(74,158,63,0.4);
@@ -109,16 +114,58 @@
     .btn-outline { border: 2px solid rgba(255,255,255,0.3); color: #fff; padding: 13px 32px; border-radius: 5px; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: border-color 0.25s, background 0.25s; display: inline-block; }
     .btn-outline:hover { border-color: var(--amber); background: rgba(245,166,35,0.08); }
 
-    .hero-visual { position: absolute; right: 4vw; top: 50%; transform: translateY(-50%); width: min(420px, 40vw); animation: fadeIn 1.2s ease 2.7s both; pointer-events: none; }
-    .epc-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 28px; backdrop-filter: blur(10px); }
-    .epc-card h3 { color: rgba(255,255,255,0.5); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 18px; font-weight: 500; }
-    .epc-band { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; border-radius: 4px; padding: 7px 12px; }
-    .epc-label { font-weight: 700; color: #fff; width: 20px; font-size: 1rem; }
-    .epc-bar { flex: 1; height: 8px; border-radius: 3px; }
-    .epc-score { color: rgba(255,255,255,0.7); font-size: 0.78rem; margin-left: auto; }
-    .band-a { background: rgba(0,158,96,0.25); } .band-b { background: rgba(50,205,50,0.2); } .band-c { background: rgba(183,228,42,0.2); } .band-d { background: rgba(255,200,0,0.2); } .band-e { background: rgba(255,140,0,0.2); }
-    .current-band { border: 1px solid var(--green); background: rgba(74,158,63,0.22) !important; }
-    .bar-a { background: #009e60; width: 95%; } .bar-b { background: #32cd32; width: 80%; } .bar-c { background: #b7e42a; width: 68%; } .bar-d { background: #ffc800; width: 54%; } .bar-e { background: #ff8c00; width: 38%; }
+    /* ══ EPC CARD — full A to G, official UK colours & chevron arrows ══ */
+    .hero-visual {
+      position: absolute; right: 4vw; top: 50%; transform: translateY(-50%);
+      width: min(360px, 36vw);
+      animation: fadeIn 1.2s ease 4.4s both; pointer-events: none;
+    }
+    .epc-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px; padding: 22px 20px;
+      backdrop-filter: blur(10px);
+    }
+    .epc-card h3 {
+      color: rgba(255,255,255,0.5); font-size: 0.68rem;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 14px; font-weight: 500;
+    }
+    .epc-row {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 5px;
+    }
+    /* Chevron arrow — width set per band below */
+    .epc-arrow {
+      display: flex; align-items: center;
+      height: 26px;
+      padding: 0 14px 0 8px;
+      clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 50%, calc(100% - 9px) 100%, 0 100%);
+      flex-shrink: 0; min-width: 36px;
+    }
+    .epc-band-letter { font-weight: 800; color: #fff; font-size: 0.85rem; line-height: 1; }
+    .epc-range { color: rgba(255,255,255,0.7); font-size: 0.68rem; font-weight: 400; white-space: nowrap; flex-shrink: 0; }
+
+    /* Official UK EPC colours, widths proportional to score range */
+    .epc-row[data-band="A"] .epc-arrow { background: #008054; width: 88%; }
+    .epc-row[data-band="B"] .epc-arrow { background: #19b459; width: 78%; }
+    .epc-row[data-band="C"] .epc-arrow { background: #8dce46; width: 68%; }
+    .epc-row[data-band="D"] .epc-arrow { background: #ffd500; width: 58%; }
+    .epc-row[data-band="E"] .epc-arrow { background: #fcaa65; width: 48%; }
+    .epc-row[data-band="F"] .epc-arrow { background: #ef8023; width: 38%; }
+    .epc-row[data-band="G"] .epc-arrow { background: #e9153b; width: 30%; }
+
+    /* Highlight current band with white outline */
+    .epc-row.current-rating .epc-arrow {
+      box-shadow: 0 0 0 2px #fff;
+    }
+    .current-tag {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff; font-size: 0.58rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 2px 7px; border-radius: 10px; white-space: nowrap;
+    }
 
     /* ══ STATS ══ */
     .stats-strip { background: var(--navy); padding: 40px 6vw; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
@@ -249,14 +296,40 @@
         <a href="aboutus.html" class="btn-outline">About Us</a>
       </div>
     </div>
+
+    <!-- Full A–G EPC Rating Chart -->
     <div class="hero-visual">
       <div class="epc-card">
         <h3>Energy Performance Rating</h3>
-        <div class="epc-band band-a"><span class="epc-label">A</span><div class="epc-bar bar-a"></div><span class="epc-score">92–100</span></div>
-        <div class="epc-band band-b"><span class="epc-label">B</span><div class="epc-bar bar-b"></div><span class="epc-score">81–91</span></div>
-        <div class="epc-band band-c current-band"><span class="epc-label">C</span><div class="epc-bar bar-c"></div><span class="epc-score">69–80</span></div>
-        <div class="epc-band band-d"><span class="epc-label">D</span><div class="epc-bar bar-d"></div><span class="epc-score">55–68</span></div>
-        <div class="epc-band band-e"><span class="epc-label">E</span><div class="epc-bar bar-e"></div><span class="epc-score">39–54</span></div>
+        <div class="epc-row" data-band="A">
+          <div class="epc-arrow"><span class="epc-band-letter">A</span></div>
+          <span class="epc-range">92–100</span>
+        </div>
+        <div class="epc-row" data-band="B">
+          <div class="epc-arrow"><span class="epc-band-letter">B</span></div>
+          <span class="epc-range">81–91</span>
+        </div>
+        <div class="epc-row current-rating" data-band="C">
+          <div class="epc-arrow"><span class="epc-band-letter">C</span></div>
+          <span class="epc-range">69–80</span>
+          <span class="current-tag">Typical avg</span>
+        </div>
+        <div class="epc-row" data-band="D">
+          <div class="epc-arrow"><span class="epc-band-letter">D</span></div>
+          <span class="epc-range">55–68</span>
+        </div>
+        <div class="epc-row" data-band="E">
+          <div class="epc-arrow"><span class="epc-band-letter">E</span></div>
+          <span class="epc-range">39–54</span>
+        </div>
+        <div class="epc-row" data-band="F">
+          <div class="epc-arrow"><span class="epc-band-letter">F</span></div>
+          <span class="epc-range">21–38</span>
+        </div>
+        <div class="epc-row" data-band="G">
+          <div class="epc-arrow"><span class="epc-band-letter">G</span></div>
+          <span class="epc-range">1–20</span>
+        </div>
       </div>
     </div>
   </section>
