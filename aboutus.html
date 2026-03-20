@@ -4,26 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | SAS Home Energy</title>
-  <meta name="description" content="Learn about SAS Home Energy — fully qualified Domestic Energy Assessors specialising in EPCs for all properties including traditional and older homes." />
+  <meta name="description" content="Fully qualified Domestic Energy Assessors with specialist knowledge of traditional and older properties. Learn about SAS Home Energy." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"SAS Home Energy","telephone":"07480839113","url":"https://sashomeenergy.co.uk","areaServed":{"@type":"Country","name":"United Kingdom"}}
+  </script>
   <style>
-    :root {
-      --navy:#1e2d45; --navy-deep:#141e2f; --green:#4a9e3f; --green-light:#5cba50;
-      --teal:#1e7a8c; --amber:#f5a623; --off-white:#f7f8f5; --mid-grey:#6b7280;
-      --light-border:rgba(255,255,255,0.08);
-    }
+    :root{--navy:#1e2d45;--navy-deep:#141e2f;--green:#4a9e3f;--green-light:#5cba50;--teal:#1e7a8c;--amber:#f5a623;--off-white:#f7f8f5;--mid-grey:#6b7280;--light-border:rgba(255,255,255,0.08)}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{font-family:'DM Sans',sans-serif;background:var(--off-white);color:var(--navy);overflow-x:hidden}
-
-    /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 6vw;height:72px;background:rgba(20,30,47,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--light-border)}
     .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;z-index:101}
     .nav-logo img{height:46px;width:auto}
-    .nav-links{display:flex;gap:36px;list-style:none}
-    .nav-links a{color:rgba(255,255,255,0.78);text-decoration:none;font-size:0.88rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links{display:flex;gap:28px;list-style:none}
+    .nav-links a{color:rgba(255,255,255,0.78);text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
     .nav-links a:hover,.nav-links a.active{color:var(--amber)}
     .nav-cta{background:var(--green);color:#fff!important;padding:9px 22px;border-radius:4px;transition:background 0.2s!important}
     .nav-cta:hover{background:var(--green-light)!important}
@@ -40,24 +37,18 @@
     .mobile-menu a.mobile-cta:hover{background:var(--green-light)}
     .mobile-menu .mobile-phone{margin-top:24px;color:rgba(255,255,255,0.5);font-size:0.9rem;border-bottom:none;padding:0}
     .mobile-menu .mobile-phone a{font-size:1.1rem;color:var(--amber);border-bottom:none;display:inline}
-
-    /* PAGE HERO */
     .page-hero{background:linear-gradient(135deg,var(--navy-deep),var(--navy) 60%,#1a3a4a);padding:140px 6vw 80px;position:relative;overflow:hidden}
     .page-hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
     .page-hero-inner{position:relative;z-index:2;max-width:640px}
-    .breadcrumb{font-size:0.78rem;color:rgba(255,255,255,0.45);margin-bottom:18px;letter-spacing:0.05em}
+    .breadcrumb{font-size:0.78rem;color:rgba(255,255,255,0.45);margin-bottom:18px}
     .breadcrumb a{color:rgba(255,255,255,0.45);text-decoration:none}
     .breadcrumb a:hover{color:var(--amber)}
     .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4.5vw,3.2rem);color:#fff;line-height:1.2;margin-bottom:18px}
     .page-hero p{font-size:1.02rem;color:rgba(255,255,255,0.68);line-height:1.78;font-weight:300}
-
-    /* SECTIONS */
     section{padding:72px 6vw}
     .section-eyebrow{font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
     .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);color:var(--navy);line-height:1.28;margin-bottom:18px}
     .section-sub{font-size:1rem;color:var(--mid-grey);line-height:1.75;font-weight:300}
-
-    /* MISSION */
     .mission{background:#fff}
     .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
     .mission-text p{color:var(--mid-grey);line-height:1.8;font-size:0.97rem;font-weight:300;margin-bottom:18px}
@@ -71,8 +62,6 @@
     .value-icon{font-size:1.3rem;flex-shrink:0}
     .value-item h4{font-weight:600;font-size:0.92rem;margin-bottom:4px}
     .value-item p{font-size:0.82rem;color:rgba(255,255,255,0.65);line-height:1.55;font-weight:300}
-
-    /* EXPERTISE */
     .expertise{background:var(--off-white)}
     .expertise-header{margin-bottom:48px}
     .expertise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -81,8 +70,6 @@
     .expertise-num{font-family:'Playfair Display',serif;font-size:2.2rem;color:rgba(74,158,63,0.2);font-weight:700;margin-bottom:6px;line-height:1}
     .expertise-card h4{font-weight:600;font-size:0.97rem;color:var(--navy);margin-bottom:8px}
     .expertise-card p{font-size:0.87rem;color:var(--mid-grey);line-height:1.7;font-weight:300}
-
-    /* ACCREDITATIONS */
     .accreditations{background:#fff}
     .accred-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
     .accred-list{display:flex;flex-direction:column;gap:16px}
@@ -99,8 +86,6 @@
     .older-properties-box{background:rgba(74,158,63,0.07);border:1px solid rgba(74,158,63,0.25);border-radius:14px;padding:28px}
     .older-properties-box h4{font-weight:700;font-size:0.97rem;color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:8px}
     .older-properties-box p{font-size:0.87rem;color:var(--mid-grey);line-height:1.7;font-weight:300}
-
-    /* CTA + FOOTER */
     .cta-band{background:linear-gradient(135deg,var(--navy-deep),var(--navy) 60%,#1a3a4a);padding:72px 6vw;text-align:center}
     .cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3vw,2.6rem);color:#fff;margin-bottom:16px}
     .cta-band p{color:rgba(255,255,255,0.65);font-size:1rem;margin-bottom:32px;font-weight:300}
@@ -118,46 +103,10 @@
     .footer-col a:hover{color:var(--amber)}
     .footer-col p{font-size:0.87rem;line-height:1.7}
     .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:22px;display:flex;justify-content:space-between;font-size:0.78rem;flex-wrap:wrap;gap:10px}
-
-    /* ══ TABLET ══ */
-    @media(max-width:900px){
-      .nav-links{display:none}
-      .hamburger{display:flex}
-      .mobile-menu{display:flex}
-      .page-hero{padding:110px 6vw 60px}
-      .mission-grid{grid-template-columns:1fr;gap:36px}
-      .expertise-grid{grid-template-columns:1fr 1fr;gap:16px}
-      .accred-grid{grid-template-columns:1fr;gap:32px}
-      .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
-      .footer-brand{grid-column:1 / -1}
-    }
-
-    /* ══ MOBILE ══ */
-    @media(max-width:600px){
-      nav{padding:0 5vw;height:64px}
-      .nav-logo img{height:40px}
-      .mobile-menu{top:64px}
-      .page-hero{padding:88px 5vw 48px}
-      .page-hero h1{font-size:clamp(1.7rem,7.5vw,2.2rem)}
-      .page-hero p{font-size:0.95rem}
-      section{padding:48px 5vw}
-      .section-title{font-size:clamp(1.4rem,5.5vw,1.9rem)}
-      .mission-grid{gap:28px}
-      .mission-image-block{padding:24px 20px}
-      .expertise-grid{grid-template-columns:1fr;gap:12px}
-      .expertise-card{padding:22px 18px}
-      .accred-grid{gap:24px}
-      .accred-item{padding:16px}
-      .promise-box{padding:24px 20px}
-      .older-properties-box{padding:20px}
-      .cta-band{padding:48px 5vw}
-      .cta-btns{flex-direction:column;align-items:center}
-      .btn-amber,.btn-outline{width:100%;max-width:320px;text-align:center;padding:16px 24px}
-      .footer-grid{grid-template-columns:1fr;gap:24px}
-      .footer-brand{grid-column:auto}
-      footer{padding:36px 5vw 20px}
-      .footer-bottom{flex-direction:column;text-align:center;gap:6px}
-    }
+    .footer-bottom a{color:rgba(255,255,255,0.4);text-decoration:none}
+    .footer-bottom a:hover{color:var(--amber)}
+    @media(max-width:900px){.nav-links{display:none}.hamburger{display:flex}.mobile-menu{display:flex}.page-hero{padding:110px 6vw 60px}.mission-grid{grid-template-columns:1fr;gap:36px}.expertise-grid{grid-template-columns:1fr 1fr;gap:16px}.accred-grid{grid-template-columns:1fr;gap:32px}.footer-grid{grid-template-columns:1fr 1fr;gap:28px}.footer-brand{grid-column:1/-1}}
+    @media(max-width:600px){nav{padding:0 5vw;height:64px}.nav-logo img{height:40px}.mobile-menu{top:64px}.page-hero{padding:88px 5vw 48px}.page-hero h1{font-size:clamp(1.7rem,7.5vw,2.2rem)}.page-hero p{font-size:0.95rem}section{padding:48px 5vw}.section-title{font-size:clamp(1.4rem,5.5vw,1.9rem)}.mission-grid{gap:28px}.mission-image-block{padding:24px 20px}.expertise-grid{grid-template-columns:1fr;gap:12px}.expertise-card{padding:22px 18px}.accred-grid{gap:24px}.accred-item{padding:16px}.promise-box{padding:24px 20px}.older-properties-box{padding:20px}.cta-band{padding:48px 5vw}.cta-btns{flex-direction:column;align-items:center}.btn-amber,.btn-outline{width:100%;max-width:320px;text-align:center;padding:16px 24px}.footer-grid{grid-template-columns:1fr;gap:24px}.footer-brand{grid-column:auto}footer{padding:36px 5vw 20px}.footer-bottom{flex-direction:column;text-align:center;gap:6px}}
   </style>
 </head>
 <body>
@@ -168,16 +117,16 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="aboutus.html" class="active">About Us</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
       <li><a href="contactus.html">Contact</a></li>
-      <li><a href="contactus.html" class="nav-cta">Book an Assessment</a></li>
+      <li><a href="contactus.html" class="nav-cta">Book Now</a></li>
     </ul>
-    <button class="hamburger" id="menuBtn" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="menuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </nav>
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Home</a>
     <a href="aboutus.html">About Us</a>
+    <a href="pricing.html">Pricing</a>
     <a href="contactus.html">Contact</a>
     <a href="contactus.html" class="mobile-cta">Book an Assessment</a>
     <p class="mobile-phone">Call us: <a href="tel:07480839113">07480 839113</a></p>
@@ -218,10 +167,10 @@
     </div>
     <div class="expertise-grid">
       <div class="expertise-card"><div class="expertise-num">01</div><h4>Domestic Energy Assessments</h4><p>Comprehensive EPC surveys for residential properties of all types and ages, carried out by accredited Domestic Energy Assessors using government-approved methodology.</p></div>
-      <div class="expertise-card"><div class="expertise-num">02</div><h4>Traditional &amp; Period Properties</h4><p>We have specialist knowledge of older construction methods and materials, enabling us to produce fair, nuanced assessments for listed buildings, stone-built homes, and pre-1919 properties.</p></div>
-      <div class="expertise-card"><div class="expertise-num">03</div><h4>Retrofit Assessments</h4><p>Identifying the most impactful energy improvements for your specific property and situation — supporting grant applications and long-term energy planning.</p></div>
-      <div class="expertise-card"><div class="expertise-num">04</div><h4>Landlord MEES Compliance</h4><p>Helping landlords understand and meet Minimum Energy Efficiency Standards requirements, with clear advice on achieving the required EPC rating cost-effectively.</p></div>
-      <div class="expertise-card"><div class="expertise-num">05</div><h4>New Build Certifications</h4><p>On-construction and as-built EPCs for developers, housing associations, and self-builders — produced accurately and lodged promptly to meet regulatory deadlines.</p></div>
+      <div class="expertise-card"><div class="expertise-num">02</div><h4>Traditional &amp; Period Properties</h4><p>Specialist knowledge of older construction methods and materials, enabling fair, nuanced assessments for listed buildings, stone-built homes, and pre-1919 properties.</p></div>
+      <div class="expertise-card"><div class="expertise-num">03</div><h4>Retrofit Assessments</h4><p>Identifying the most impactful energy improvements for your property — supporting grant applications and long-term energy planning.</p></div>
+      <div class="expertise-card"><div class="expertise-num">04</div><h4>Landlord MEES Compliance</h4><p>Helping landlords meet Minimum Energy Efficiency Standards requirements, with clear advice on achieving the required EPC rating cost-effectively.</p></div>
+      <div class="expertise-card"><div class="expertise-num">05</div><h4>New Build Certifications</h4><p>On-construction and as-built EPCs for developers, housing associations, and self-builders — produced accurately and lodged promptly.</p></div>
       <div class="expertise-card"><div class="expertise-num">06</div><h4>Nationwide Coverage</h4><p>Operating across England, Wales, and Scotland, we bring the same high standard of service to every postcode — urban terraces or rural farmhouses alike.</p></div>
     </div>
   </section>
@@ -234,16 +183,16 @@
         <p class="section-sub" style="margin-bottom:32px">Our assessors hold all required qualifications and memberships to legally issue Energy Performance Certificates across the UK.</p>
         <div class="accred-list">
           <div class="accred-item"><div class="accred-icon-wrap">🎓</div><div><h4>Qualified Domestic Energy Assessors (DEA)</h4><p>All assessors are fully qualified and registered with a government-approved accreditation scheme, as required by law to issue EPCs.</p></div></div>
-          <div class="accred-item"><div class="accred-icon-wrap">🏛️</div><div><h4>National EPC Register</h4><p>Certificates are lodged directly on the official government register (epcregister.com) and accessible to you within 24–48 hours of your assessment.</p></div></div>
+          <div class="accred-item"><div class="accred-icon-wrap">🏛️</div><div><h4>National EPC Register</h4><p>Certificates are lodged directly on the official government register and accessible to you within 24–48 hours of your assessment.</p></div></div>
           <div class="accred-item"><div class="accred-icon-wrap">🛡️</div><div><h4>Professional Indemnity Insurance</h4><p>Comprehensive PI and public liability cover provides full peace of mind for property owners and agents alike.</p></div></div>
-          <div class="accred-item"><div class="accred-icon-wrap">📋</div><div><h4>Ongoing CPD &amp; Training</h4><p>We maintain our expertise through continuous professional development, keeping fully up to date with changes to EPC regulations and assessment standards.</p></div></div>
+          <div class="accred-item"><div class="accred-icon-wrap">📋</div><div><h4>Ongoing CPD &amp; Training</h4><p>We maintain our expertise through continuous professional development, keeping fully up to date with EPC regulations and assessment standards.</p></div></div>
         </div>
       </div>
       <div class="accred-right">
         <div class="promise-box">
           <h3>Our Promise to You</h3>
           <p>We will always provide an honest, accurate assessment — never inflated to close a sale, never underestimated to keep costs down. Your EPC is a legal document and we treat it with the care and professionalism that demands.</p>
-          <p>If you have questions before, during, or after your assessment, we're always on hand to help. We're proud of our reputation for approachable, knowledgeable service that puts the client first.</p>
+          <p>If you have questions before, during, or after your assessment, we're always on hand to help.</p>
         </div>
         <div class="older-properties-box">
           <h4>🏛️ Specialists in Older Properties</h4>
@@ -268,15 +217,14 @@
         <img src="https://www.dropbox.com/scl/fi/dybbf43rt3a0gb7jxwgl4/SAS-Home-Energy-logo-design-1.png?rlkey=93v1pexz0c1an2e80ktc2iy7s&st=g7nm3pd9&dl=1" alt="SAS Home Energy" />
         <p>Qualified Domestic Energy Assessors providing Energy Performance Certificates and retrofit assessments across the UK.</p>
       </div>
-      <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="aboutus.html">About Us</a><a href="contactus.html">Contact</a><a href="contactus.html">Book an Assessment</a></div>
+      <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="aboutus.html">About Us</a><a href="pricing.html">Pricing</a><a href="contactus.html">Contact</a></div>
       <div class="footer-col"><h4>Contact</h4><p>📞 <a href="tel:07480839113" style="color:rgba(255,255,255,.5);text-decoration:none">07480 839113</a></p><p style="margin-top:8px">Mon–Sat: 9am – 8pm</p><p>Sunday: By Appointment</p></div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 SAS Home Energy. All rights reserved.</span>
-      <span>Accredited Domestic Energy Assessors · UK Nationwide</span>
+      <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; Accredited Domestic Energy Assessors · UK Nationwide</span>
     </div>
   </footer>
-
   <script>
     const btn=document.getElementById('menuBtn'),menu=document.getElementById('mobileMenu');
     btn.addEventListener('click',()=>{const o=menu.classList.toggle('open');btn.classList.toggle('open',o);document.body.style.overflow=o?'hidden':''});
