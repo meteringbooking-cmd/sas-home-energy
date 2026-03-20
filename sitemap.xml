@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sashomeenergy.co.uk/index.html</loc>
+    <loc>https://sas-home-energy.vercel.app/index.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sashomeenergy.co.uk/aboutus.html</loc>
+    <loc>https://sas-home-energy.vercel.app/aboutus.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sashomeenergy.co.uk/pricing.html</loc>
+    <loc>https://sas-home-energy.vercel.app/pricing.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://sashomeenergy.co.uk/contactus.html</loc>
+    <loc>https://sas-home-energy.vercel.app/improvements.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sashomeenergy.co.uk/privacy.html</loc>
+    <loc>https://sas-home-energy.vercel.app/contactus.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sas-home-energy.vercel.app/privacy.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
