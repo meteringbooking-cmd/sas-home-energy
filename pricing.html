@@ -3,11 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy | SAS Home Energy</title>
-  <meta name="description" content="SAS Home Energy privacy policy — how we collect, use and protect your personal data in accordance with UK GDPR." />
+  <title>EPC Survey Pricing | SAS Home Energy</title>
+  <meta name="description" content="Transparent, competitive pricing for Energy Performance Certificates, retrofit assessments and more. Fixed prices, no hidden fees." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"LocalBusiness",
+    "name":"SAS Home Energy","telephone":"07480839113","url":"https://sas-home-energy.vercel.app",
+    "priceRange":"££","areaServed":{"@type":"Country","name":"United Kingdom"}
+  }
+  </script>
   <style>
     :root{--navy:#1e2d45;--navy-deep:#141e2f;--green:#4a9e3f;--green-light:#5cba50;--teal:#1e7a8c;--amber:#f5a623;--off-white:#f7f8f5;--mid-grey:#6b7280;--light-border:rgba(255,255,255,0.08)}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -19,7 +26,7 @@
     .nav-logo img{height:46px;width:auto}
     .nav-links{display:flex;gap:28px;list-style:none}
     .nav-links a{color:rgba(255,255,255,0.78);text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s}
-    .nav-links a:hover{color:var(--amber)}
+    .nav-links a:hover,.nav-links a.active{color:var(--amber)}
     .nav-cta{background:var(--green);color:#fff!important;padding:9px 22px;border-radius:4px;transition:background 0.2s!important}
     .nav-cta:hover{background:var(--green-light)!important}
     .hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;z-index:101;background:none;border:none;padding:8px;margin-right:-8px}
@@ -35,30 +42,84 @@
     .mobile-menu .mobile-phone{margin-top:24px;color:rgba(255,255,255,0.5);font-size:0.9rem;border-bottom:none;padding:0}
     .mobile-menu .mobile-phone a{font-size:1.1rem;color:var(--amber);border-bottom:none;display:inline}
 
-    .page-hero{background:linear-gradient(135deg,var(--navy-deep),var(--navy) 60%,#1a3a4a);padding:140px 6vw 60px;position:relative;overflow:hidden}
+    .page-hero{background:linear-gradient(135deg,var(--navy-deep),var(--navy) 60%,#1a3a4a);padding:140px 6vw 80px;position:relative;overflow:hidden}
     .page-hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
-    .page-hero-inner{position:relative;z-index:2;max-width:720px}
+    .page-hero-inner{position:relative;z-index:2;max-width:680px}
     .breadcrumb{font-size:0.78rem;color:rgba(255,255,255,0.45);margin-bottom:18px}
     .breadcrumb a{color:rgba(255,255,255,0.45);text-decoration:none}
     .breadcrumb a:hover{color:var(--amber)}
-    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,3rem);color:#fff;line-height:1.2;margin-bottom:14px}
-    .page-hero p{font-size:0.92rem;color:rgba(255,255,255,0.55);font-weight:300}
+    .page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4.5vw,3.2rem);color:#fff;line-height:1.2;margin-bottom:18px}
+    .page-hero p{font-size:1.02rem;color:rgba(255,255,255,0.68);line-height:1.78;font-weight:300;max-width:560px}
 
-    .policy-body{max-width:780px;margin:0 auto;padding:72px 6vw 80px;background:var(--off-white)}
-    .policy-updated{display:inline-block;background:rgba(74,158,63,0.1);border:1px solid rgba(74,158,63,0.25);color:var(--green);font-size:0.78rem;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:40px}
+    .section-eyebrow{font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+    .section-title{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.5rem);color:var(--navy);line-height:1.28;margin-bottom:18px}
 
-    .policy-body h2{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--navy);margin:40px 0 14px;padding-top:8px;border-top:1px solid #e5e9ee}
-    .policy-body h2:first-of-type{margin-top:0;border-top:none;padding-top:0}
-    .policy-body p{font-size:0.93rem;color:#4a5568;line-height:1.8;font-weight:300;margin-bottom:16px}
-    .policy-body p:last-child{margin-bottom:0}
-    .policy-body ul{margin:12px 0 16px 0;padding-left:0;list-style:none}
-    .policy-body ul li{font-size:0.93rem;color:#4a5568;line-height:1.7;font-weight:300;padding:5px 0 5px 22px;position:relative}
-    .policy-body ul li::before{content:'–';position:absolute;left:0;color:var(--green);font-weight:600}
-    .policy-body a{color:var(--green);text-decoration:underline}
-    .policy-body a:hover{color:var(--green-light)}
-    .policy-contact-box{background:#fff;border:1px solid #e5e9ee;border-radius:10px;padding:24px 28px;margin-top:32px}
-    .policy-contact-box h3{font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:10px}
-    .policy-contact-box p{font-size:0.9rem;color:var(--mid-grey);font-weight:300;line-height:1.7;margin-bottom:6px}
+    /* PRICING CARDS */
+    .pricing-section{padding:80px 6vw;background:#fff}
+    .pricing-intro{text-align:center;max-width:620px;margin:0 auto 60px}
+    .pricing-intro p{font-size:1rem;color:var(--mid-grey);line-height:1.75;font-weight:300}
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:56px}
+    .price-card{border:1px solid #e5e9ee;border-radius:14px;overflow:hidden;transition:box-shadow 0.3s,transform 0.3s;background:#fff;display:flex;flex-direction:column}
+    .price-card:hover{box-shadow:0 16px 48px rgba(30,45,69,0.12);transform:translateY(-4px)}
+    .price-card.featured{border-color:var(--green);box-shadow:0 8px 32px rgba(74,158,63,0.15)}
+    .price-card-header{padding:28px 28px 24px;position:relative}
+    .price-card.featured .price-card-header{background:linear-gradient(135deg,var(--green),#3a8a30)}
+    .popular-tag{position:absolute;top:18px;right:18px;background:var(--amber);color:var(--navy-deep);font-size:0.65rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:20px}
+    .price-card-icon{font-size:1.8rem;margin-bottom:12px}
+    .price-card-title{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--navy);margin-bottom:6px}
+    .price-card.featured .price-card-title{color:#fff}
+    .price-card-desc{font-size:0.85rem;color:var(--mid-grey);line-height:1.55;font-weight:300}
+    .price-card.featured .price-card-desc{color:rgba(255,255,255,0.8)}
+    .price-card-body{padding:24px 28px 28px;flex:1;display:flex;flex-direction:column}
+    .price-from{font-size:0.72rem;color:var(--mid-grey);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;font-weight:500}
+    .price-amount{font-family:'Playfair Display',serif;font-size:2.8rem;color:var(--navy);font-weight:700;line-height:1;margin-bottom:4px}
+    .price-amount span{font-size:1.1rem;font-weight:400;color:var(--mid-grey);font-family:'DM Sans',sans-serif}
+    .price-note{font-size:0.78rem;color:var(--mid-grey);margin-bottom:24px;font-weight:300}
+    .price-features{list-style:none;margin-bottom:28px;flex:1}
+    .price-features li{display:flex;align-items:flex-start;gap:10px;font-size:0.87rem;color:var(--mid-grey);padding:7px 0;border-bottom:1px solid #f0f2f5;font-weight:300;line-height:1.5}
+    .price-features li:last-child{border-bottom:none}
+    .price-features li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px}
+    .price-cta{display:block;text-align:center;padding:13px 24px;border-radius:6px;text-decoration:none;font-weight:600;font-size:0.92rem;transition:all 0.2s;margin-top:auto}
+    .price-cta-outline{border:2px solid var(--navy);color:var(--navy)}
+    .price-cta-outline:hover{background:var(--navy);color:#fff}
+    .price-cta-filled{background:var(--green);color:#fff}
+    .price-cta-filled:hover{background:var(--green-light)}
+
+    /* QUOTE ROW */
+    .quote-row{background:rgba(74,158,63,0.06);border:1px solid rgba(74,158,63,0.2);border-radius:12px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:56px}
+    .quote-row-text h3{font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:4px}
+    .quote-row-text p{font-size:0.88rem;color:var(--mid-grey);font-weight:300}
+    .quote-row a{background:var(--green);color:#fff;text-decoration:none;padding:13px 28px;border-radius:6px;font-weight:700;font-size:0.9rem;white-space:nowrap;transition:background 0.2s;flex-shrink:0}
+    .quote-row a:hover{background:var(--green-light)}
+
+    /* ADDITIONAL SERVICES TABLE */
+    .other-services{padding:0 6vw 80px;background:#fff}
+    .other-services h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,2.5vw,2rem);color:var(--navy);margin-bottom:8px}
+    .other-services > p{font-size:0.95rem;color:var(--mid-grey);margin-bottom:32px;font-weight:300}
+    .services-table{width:100%;border-collapse:collapse}
+    .services-table th{text-align:left;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--mid-grey);padding:12px 16px;border-bottom:2px solid #e5e9ee;background:var(--off-white)}
+    .services-table td{padding:16px 16px;border-bottom:1px solid #f0f2f5;font-size:0.9rem;color:var(--navy);vertical-align:top}
+    .services-table tr:last-child td{border-bottom:none}
+    .services-table tr:hover td{background:#fafbfd}
+    .services-table td:last-child{font-weight:600;color:var(--green);white-space:nowrap}
+    .services-table td:nth-child(2){color:var(--mid-grey);font-size:0.85rem;font-weight:300;line-height:1.5}
+
+    /* INCLUDED ALWAYS */
+    .always-included{padding:0 6vw 80px;background:#fff}
+    .included-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .included-item{background:var(--off-white);border-radius:10px;padding:22px 18px;text-align:center}
+    .included-icon{font-size:1.6rem;margin-bottom:10px}
+    .included-item h4{font-weight:600;font-size:0.9rem;color:var(--navy);margin-bottom:6px}
+    .included-item p{font-size:0.8rem;color:var(--mid-grey);line-height:1.55;font-weight:300}
+
+    .cta-band{background:linear-gradient(135deg,var(--navy-deep),var(--navy) 60%,#1a3a4a);padding:80px 6vw;text-align:center}
+    .cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3vw,2.6rem);color:#fff;margin-bottom:16px}
+    .cta-band p{color:rgba(255,255,255,0.65);font-size:1rem;margin-bottom:36px;font-weight:300}
+    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .btn-amber{background:var(--amber);color:var(--navy-deep);font-weight:700;padding:15px 32px;border-radius:5px;text-decoration:none;font-size:0.95rem;transition:filter 0.2s,transform 0.2s}
+    .btn-amber:hover{filter:brightness(1.1);transform:translateY(-1px)}
+    .btn-outline-light{border:2px solid rgba(255,255,255,0.3);color:#fff;padding:13px 32px;border-radius:5px;text-decoration:none;font-weight:500;font-size:0.95rem;transition:border-color 0.25s}
+    .btn-outline-light:hover{border-color:var(--amber)}
 
     footer{background:var(--navy-deep);color:rgba(255,255,255,0.55);padding:48px 6vw 28px}
     .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px}
@@ -72,8 +133,27 @@
     .footer-bottom a{color:rgba(255,255,255,0.4);text-decoration:none}
     .footer-bottom a:hover{color:var(--amber)}
 
-    @media(max-width:900px){.nav-links{display:none}.hamburger{display:flex}.mobile-menu{display:flex}.footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}}
-    @media(max-width:600px){nav{padding:0 5vw;height:64px}.nav-logo img{height:40px}.mobile-menu{top:64px}.page-hero{padding:88px 5vw 48px}.policy-body{padding:48px 5vw 64px}.footer-grid{grid-template-columns:1fr;gap:24px}.footer-brand{grid-column:auto}footer{padding:36px 5vw 20px}.footer-bottom{flex-direction:column;text-align:center;gap:6px}}
+    @media(max-width:900px){
+      .nav-links{display:none}.hamburger{display:flex}.mobile-menu{display:flex}
+      .pricing-grid{grid-template-columns:1fr 1fr;gap:18px}
+      .included-grid{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}
+    }
+    @media(max-width:600px){
+      nav{padding:0 5vw;height:64px}.nav-logo img{height:40px}.mobile-menu{top:64px}
+      .page-hero{padding:88px 5vw 48px}
+      .pricing-section{padding:48px 5vw}
+      .other-services,.always-included{padding:0 5vw 48px}
+      .pricing-grid{grid-template-columns:1fr;gap:16px}
+      .included-grid{grid-template-columns:1fr 1fr;gap:14px}
+      .quote-row{flex-direction:column;text-align:center}
+      .services-table th:nth-child(2),.services-table td:nth-child(2){display:none}
+      .cta-band{padding:48px 5vw}
+      .cta-btns{flex-direction:column;align-items:center}
+      .btn-amber,.btn-outline-light{width:100%;max-width:320px;text-align:center;padding:16px 24px}
+      .footer-grid{grid-template-columns:1fr;gap:24px}.footer-brand{grid-column:auto}
+      footer{padding:36px 5vw 20px}.footer-bottom{flex-direction:column;text-align:center;gap:6px}
+    }
   </style>
 </head>
 <body>
@@ -81,22 +161,21 @@
     <a href="index.html" class="nav-logo">
       <img src="https://www.dropbox.com/scl/fi/dybbf43rt3a0gb7jxwgl4/SAS-Home-Energy-logo-design-1.png?rlkey=93v1pexz0c1an2e80ktc2iy7s&st=g7nm3pd9&dl=1" alt="SAS Home Energy" />
     </a>
-    <ul class="nav-links">
+        <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="aboutus.html">About Us</a>
-    <a href="improvements.html">Improvements</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
       <li><a href="improvements.html">Improvements</a></li>
-      <li><a href="improvements.html">Improvements</a><a href="pricing.html">Pricing</a></li>
+      <li><a href="pricing.html" class="active">Pricing</a></li>
       <li><a href="contactus.html">Contact</a></li>
       <li><a href="contactus.html" class="nav-cta">Book Now</a></li>
     </ul>
     <button class="hamburger" id="menuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </nav>
-  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu">
     <a href="index.html">Home</a>
     <a href="aboutus.html">About Us</a>
     <a href="improvements.html">Improvements</a>
-    <a href="improvements.html">Improvements</a><a href="pricing.html">Pricing</a>
+    <a href="pricing.html">Pricing</a>
     <a href="contactus.html">Contact</a>
     <a href="contactus.html" class="mobile-cta">Book an Assessment</a>
     <p class="mobile-phone">Call us: <a href="tel:07480839113">07480 839113</a></p>
@@ -104,94 +183,151 @@
 
   <div class="page-hero">
     <div class="page-hero-inner">
-      <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Privacy Policy</div>
-      <h1>Privacy Policy</h1>
-      <p>Last updated: January 2026</p>
+      <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Pricing</div>
+      <h1>Transparent Pricing.<br>No Hidden Fees.</h1>
+      <p>We believe in straightforward, fixed-price quotes. You'll always know exactly what you're paying before we visit — no surprises on the day.</p>
     </div>
   </div>
 
-  <div class="policy-body">
-    <span class="policy-updated">Last updated: January 2026</span>
+  <section class="pricing-section">
+    <div class="pricing-intro">
+      <div class="section-eyebrow">Our Prices</div>
+      <h2 class="section-title">Domestic EPC Certificates</h2>
+      <p>Prices are based on property size. All certificates are produced by fully qualified Domestic Energy Assessors and lodged on the national register. VAT is not applicable.</p>
+    </div>
 
-    <h2>1. Who We Are</h2>
-    <p>SAS Home Energy ("we", "us", "our") is a domestic energy assessment company operating across the United Kingdom. We are the data controller responsible for your personal information collected through this website and in connection with our services.</p>
-    <p>If you have any questions about this policy or how we handle your data, please contact us at <a href="tel:07480839113">07480 839113</a>.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-card-header">
+          <div class="price-card-icon">🏠</div>
+          <h3 class="price-card-title">1–3 Bedroom</h3>
+          <p class="price-card-desc">Flats, terraced, semi-detached and smaller detached properties.</p>
+        </div>
+        <div class="price-card-body">
+          <div class="price-from">From</div>
+          <div class="price-amount">£60<span> +VAT n/a</span></div>
+          <div class="price-note">Fixed price · No hidden extras</div>
+          <ul class="price-features">
+            <li>Full on-site assessment</li>
+            <li>Certificate lodged nationally</li>
+            <li>PDF emailed within 48hrs</li>
+            <li>Improvement recommendations</li>
+            <li>Valid for 10 years</li>
+          </ul>
+          <a href="contactus.html" class="price-cta price-cta-outline">Get a Quote</a>
+        </div>
+      </div>
 
-    <h2>2. What Information We Collect</h2>
-    <p>We may collect the following personal information when you use our website or contact us:</p>
-    <ul>
-      <li>Your name and contact details (email address, phone number)</li>
-      <li>Your property address and postcode</li>
-      <li>Details about your property relevant to the assessment</li>
-      <li>Correspondence you send to us, including via the contact form</li>
-      <li>Technical data such as your IP address and browser type (collected automatically when you visit our website)</li>
-    </ul>
+      <div class="price-card featured">
+        <div class="price-card-header">
+          <div class="popular-tag">Most Popular</div>
+          <div class="price-card-icon">🏡</div>
+          <h3 class="price-card-title">4–5 Bedroom</h3>
+          <p class="price-card-desc">Larger detached, semi-detached and townhouse properties.</p>
+        </div>
+        <div class="price-card-body">
+          <div class="price-from">From</div>
+          <div class="price-amount">£80<span></span></div>
+          <div class="price-note">Fixed price · No hidden extras</div>
+          <ul class="price-features">
+            <li>Full on-site assessment</li>
+            <li>Certificate lodged nationally</li>
+            <li>PDF emailed within 48hrs</li>
+            <li>Improvement recommendations</li>
+            <li>Valid for 10 years</li>
+          </ul>
+          <a href="contactus.html" class="price-cta price-cta-filled">Book Now</a>
+        </div>
+      </div>
 
-    <h2>3. How We Use Your Information</h2>
-    <p>We use your personal data for the following purposes:</p>
-    <ul>
-      <li>To respond to your enquiries and arrange your energy assessment</li>
-      <li>To carry out and deliver Energy Performance Certificates and other assessments</li>
-      <li>To lodge your certificate on the national EPC register as required by law</li>
-      <li>To send you your certificate and any supporting documentation</li>
-      <li>To improve our website and services</li>
-      <li>To comply with legal obligations, including those relating to energy assessment accreditation</li>
-    </ul>
+      <div class="price-card">
+        <div class="price-card-header">
+          <div class="price-card-icon">🏘️</div>
+          <h3 class="price-card-title">6+ Bedroom</h3>
+          <p class="price-card-desc">Large detached homes, converted properties and unusual layouts.</p>
+        </div>
+        <div class="price-card-body">
+          <div class="price-from">From</div>
+          <div class="price-amount">£100<span></span></div>
+          <div class="price-note">Fixed price · No hidden extras</div>
+          <ul class="price-features">
+            <li>Full on-site assessment</li>
+            <li>Certificate lodged nationally</li>
+            <li>PDF emailed within 48hrs</li>
+            <li>Improvement recommendations</li>
+            <li>Valid for 10 years</li>
+          </ul>
+          <a href="contactus.html" class="price-cta price-cta-outline">Get a Quote</a>
+        </div>
+      </div>
+    </div>
 
-    <h2>4. Legal Basis for Processing</h2>
-    <p>We process your personal data on the following legal grounds under UK GDPR:</p>
-    <ul>
-      <li><strong>Contract performance</strong> — processing is necessary to carry out the services you have requested</li>
-      <li><strong>Legal obligation</strong> — we are required to lodge EPCs on the national register under the Energy Performance of Buildings Regulations</li>
-      <li><strong>Legitimate interests</strong> — to respond to your enquiries and improve our services</li>
-      <li><strong>Consent</strong> — where you have explicitly provided consent, for example when subscribing to any communications</li>
-    </ul>
+    <div class="quote-row">
+      <div class="quote-row-text">
+        <h3>Not sure which applies to you?</h3>
+        <p>Just give us a call or drop us a message — we'll confirm the exact price for your property straight away.</p>
+      </div>
+      <a href="tel:07480839113">📞 Call 07480 839113</a>
+    </div>
+  </section>
 
-    <h2>5. How Long We Keep Your Data</h2>
-    <p>We retain your personal information for as long as is necessary to fulfil the purposes for which it was collected, including for the purposes of satisfying any legal, accounting or reporting requirements.</p>
-    <p>EPC records are lodged on the national register and are retained in accordance with government requirements (typically for the life of the certificate — 10 years). Our own records relating to completed assessments are retained for up to 6 years for insurance and compliance purposes.</p>
-    <p>Enquiry data where no assessment was carried out is deleted within 12 months.</p>
+  <section class="other-services">
+    <h2>Additional Services</h2>
+    <p>We offer a range of assessments beyond standard EPCs. All prices are fixed and confirmed before booking.</p>
+    <table class="services-table">
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Description</th>
+          <th>From</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Retrofit Assessment</td>
+          <td>Identifies the most cost-effective energy improvements for your property. Required for ECO4 and other grant schemes.</td>
+          <td>POA</td>
+        </tr>
+        <tr>
+          <td>New Build EPC (On-Construction)</td>
+          <td>As-built certificate for new builds and conversions. Required for Building Regulations sign-off.</td>
+          <td>POA</td>
+        </tr>
+        <tr>
+          <td>Older / Traditional Property EPC</td>
+          <td>Specialist assessment for pre-1919 solid-wall, listed and traditionally constructed properties.</td>
+          <td>POA</td>
+        </tr>
+        <tr>
+          <td>Landlord Portfolio (3+ properties)</td>
+          <td>Discounted rates available for landlords requiring multiple EPCs. Contact us for a tailored quote.</td>
+          <td>Discounted</td>
+        </tr>
+        <tr>
+          <td>Express / Same-Day Service</td>
+          <td>Subject to availability. Certificate issued same day where possible.</td>
+          <td>+£20</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-    <h2>6. Who We Share Your Data With</h2>
-    <p>We do not sell or rent your personal data to third parties. We may share your information in the following limited circumstances:</p>
-    <ul>
-      <li><strong>National EPC Register</strong> — your certificate data is lodged as required by law</li>
-      <li><strong>Accreditation bodies</strong> — we may be required to share assessment records with Elmhurst Energy or other accreditation bodies for audit and compliance purposes</li>
-      <li><strong>Legal requirements</strong> — where we are required to disclose information by law, court order or regulatory authority</li>
-    </ul>
+  <section class="always-included">
+    <div class="section-eyebrow" style="margin-bottom:20px">Always Included</div>
+    <div class="included-grid">
+      <div class="included-item"><div class="included-icon">📋</div><h4>National Registration</h4><p>Your certificate is lodged on the official government EPC register.</p></div>
+      <div class="included-item"><div class="included-icon">⚡</div><h4>Fast Turnaround</h4><p>Certificate emailed within 24–48 hours of your assessment.</p></div>
+      <div class="included-item"><div class="included-icon">💡</div><h4>Improvement Report</h4><p>Clear recommendations on how to improve your EPC rating.</p></div>
+      <div class="included-item"><div class="included-icon">🛡️</div><h4>Fully Insured</h4><p>Professional indemnity and public liability cover on every visit.</p></div>
+    </div>
+  </section>
 
-    <h2>7. Your Rights</h2>
-    <p>Under UK GDPR, you have the following rights regarding your personal data:</p>
-    <ul>
-      <li><strong>Right of access</strong> — you can request a copy of the personal data we hold about you</li>
-      <li><strong>Right to rectification</strong> — you can ask us to correct inaccurate or incomplete data</li>
-      <li><strong>Right to erasure</strong> — you can ask us to delete your data in certain circumstances</li>
-      <li><strong>Right to restrict processing</strong> — you can ask us to limit how we use your data</li>
-      <li><strong>Right to data portability</strong> — you can request your data in a structured, machine-readable format</li>
-      <li><strong>Right to object</strong> — you can object to processing based on legitimate interests</li>
-    </ul>
-    <p>To exercise any of these rights, please contact us using the details below. We will respond within 30 days.</p>
-
-    <h2>8. Cookies</h2>
-    <p>Our website uses only essential technical cookies necessary for the site to function. We do not use advertising, tracking or analytics cookies. No cookie consent banner is required as we do not set non-essential cookies.</p>
-
-    <h2>9. Security</h2>
-    <p>We take reasonable technical and organisational measures to protect your personal information against unauthorised access, loss or misuse. Our website is hosted via GitHub Pages and data submitted through our contact form is transmitted securely.</p>
-
-    <h2>10. Links to Other Websites</h2>
-    <p>Our website may contain links to third-party websites such as Elmhurst Energy or TrustMark. We are not responsible for the privacy practices of those sites and encourage you to read their privacy policies separately.</p>
-
-    <h2>11. Changes to This Policy</h2>
-    <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically.</p>
-
-    <h2>12. Complaints</h2>
-    <p>If you are unhappy with how we have handled your personal data, you have the right to lodge a complaint with the Information Commissioner's Office (ICO), the UK's data protection regulator. You can contact the ICO at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a> or by calling 0303 123 1113.</p>
-
-    <div class="policy-contact-box">
-      <h3>Contact Us About Your Data</h3>
-      <p>SAS Home Energy</p>
-      <p>📞 <a href="tel:07480839113">07480 839113</a></p>
-      <p>Available Monday–Saturday, 9am–8pm. Sunday by appointment.</p>
+  <div class="cta-band">
+    <h2>Ready to Book Your Assessment?</h2>
+    <p>Fixed prices, no hidden fees. Get in touch today for an instant quote.</p>
+    <div class="cta-btns">
+      <a href="contactus.html" class="btn-amber">Book Now</a>
+      <a href="tel:07480839113" class="btn-outline-light">📞 07480 839113</a>
     </div>
   </div>
 
@@ -201,8 +337,13 @@
         <img src="https://www.dropbox.com/scl/fi/dybbf43rt3a0gb7jxwgl4/SAS-Home-Energy-logo-design-1.png?rlkey=93v1pexz0c1an2e80ktc2iy7s&st=g7nm3pd9&dl=1" alt="SAS Home Energy" />
         <p>Qualified Domestic Energy Assessors providing Energy Performance Certificates and retrofit assessments across the UK.</p>
       </div>
-      <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="aboutus.html">About Us</a>
-    <a href="improvements.html">Improvements</a><a href="improvements.html">Improvements</a><a href="pricing.html">Pricing</a><a href="contactus.html">Contact</a></div>
+      <div class="footer-col">        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="improvements.html">Improvements</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contactus.html">Contact</a>
+        </div>
       <div class="footer-col"><h4>Contact</h4><p>📞 <a href="tel:07480839113" style="color:rgba(255,255,255,.5);text-decoration:none">07480 839113</a></p><p style="margin-top:8px">Mon–Sat: 9am – 8pm</p><p>Sunday: By Appointment</p></div>
     </div>
     <div class="footer-bottom">
