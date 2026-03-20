@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energy Improvements | Loft Insulation, Heating & Solar | SAS Home Energy</title>
+  <meta name="description" content="Improve your EPC rating and reduce energy bills with loft insulation, heating upgrades and solar panel installations. Expert advice from SAS Home Energy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Energy Improvements — SAS Home Energy",
+    "description": "Guidance on improving your home's EPC rating through loft insulation, heating upgrades, and solar installations.",
+    "url": "https://sashomeenergy.co.uk/improvements.html",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "SAS Home Energy",
+      "telephone": "07480839113"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --navy:#1e2d45; --navy-deep:#141e2f; --green:#4a9e3f; --green-light:#5cba50;
+      --teal:#1e7a8c; --amber:#f5a623; --off-white:#f7f8f5; --mid-grey:#6b7280;
+      --light-border:rgba(255,255,255,0.08);
+    }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'DM Sans',sans-serif; background:var(--off-white); color:var(--navy); overflow-x:hidden; }
+
+    /* NAV */
+    nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 6vw; height:72px; background:rgba(20,30,47,0.97); backdrop-filter:blur(12px); border-bottom:1px solid var(--light-border); }
+    .nav-logo { display:flex; align-items:center; gap:12px; text-decoration:none; z-index:101; }
+    .nav-logo img { height:46px; width:auto; }
+    .nav-links { display:flex; gap:28px; list-style:none; }
+    .nav-links a { color:rgba(255,255,255,0.78); text-decoration:none; font-size:0.85rem; font-weight:500; letter-spacing:0.06em; text-transform:uppercase; transition:color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color:var(--amber); }
+    .nav-cta { background:var(--green); color:#fff !important; padding:9px 22px; border-radius:4px; transition:background 0.2s !important; }
+    .nav-cta:hover { background:var(--green-light) !important; }
+    .hamburger { display:none; flex-direction:column; justify-content:center; gap:5px; cursor:pointer; z-index:101; background:none; border:none; padding:8px; margin-right:-8px; }
+    .hamburger span { width:24px; height:2px; background:#fff; display:block; transition:transform 0.3s,opacity 0.3s; transform-origin:center; }
+    .hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    .mobile-menu { display:none; position:fixed; top:72px; left:0; right:0; bottom:0; background:var(--navy-deep); z-index:99; flex-direction:column; padding:32px 6vw 40px; overflow-y:auto; transform:translateX(100%); transition:transform 0.35s cubic-bezier(0.4,0,0.2,1); }
+    .mobile-menu.open { transform:translateX(0); }
+    .mobile-menu a { display:block; color:rgba(255,255,255,0.85); text-decoration:none; font-size:1.4rem; font-weight:600; padding:18px 0; border-bottom:1px solid rgba(255,255,255,0.07); transition:color 0.2s; }
+    .mobile-menu a:hover { color:var(--amber); }
+    .mobile-menu a.mobile-cta { margin-top:28px; border:none; background:var(--green); color:#fff; text-align:center; border-radius:8px; padding:18px; font-size:1.1rem; }
+    .mobile-menu a.mobile-cta:hover { background:var(--green-light); }
+    .mobile-menu .mobile-phone { margin-top:24px; color:rgba(255,255,255,0.5); font-size:0.9rem; border-bottom:none; padding:0; }
+    .mobile-menu .mobile-phone a { font-size:1.1rem; color:var(--amber); border-bottom:none; display:inline; }
+
+    /* PAGE HERO */
+    .page-hero { background:linear-gradient(135deg,var(--navy-deep),var(--navy) 60%,#1a3a4a); padding:140px 6vw 80px; position:relative; overflow:hidden; }
+    .page-hero::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .page-hero-inner { position:relative; z-index:2; max-width:700px; }
+    .breadcrumb { font-size:0.78rem; color:rgba(255,255,255,0.45); margin-bottom:18px; }
+    .breadcrumb a { color:rgba(255,255,255,0.45); text-decoration:none; }
+    .breadcrumb a:hover { color:var(--amber); }
+    .page-hero h1 { font-family:'Playfair Display',serif; font-size:clamp(1.9rem,4.5vw,3.2rem); color:#fff; line-height:1.2; margin-bottom:18px; }
+    .page-hero h1 em { color:var(--amber); font-style:normal; }
+    .page-hero p { font-size:1.02rem; color:rgba(255,255,255,0.68); line-height:1.78; font-weight:300; max-width:580px; }
+    .hero-badges { display:flex; gap:12px; flex-wrap:wrap; margin-top:28px; }
+    .hero-badge { display:inline-flex; align-items:center; gap:7px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:rgba(255,255,255,0.82); font-size:0.78rem; font-weight:500; padding:7px 14px; border-radius:20px; }
+
+    /* SHARED */
+    .section-eyebrow { font-size:0.75rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--green); margin-bottom:12px; }
+    .section-title { font-family:'Playfair Display',serif; font-size:clamp(1.6rem,3vw,2.5rem); color:var(--navy); line-height:1.28; margin-bottom:18px; }
+    .section-sub { font-size:1rem; color:var(--mid-grey); line-height:1.75; font-weight:300; }
+    section { padding:80px 6vw; }
+
+    /* INTRO STRIP */
+    .intro-strip { background:var(--navy); padding:36px 6vw; }
+    .intro-strip-inner { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .intro-stat { text-align:center; padding:16px; border-right:1px solid rgba(255,255,255,0.08); }
+    .intro-stat:last-child { border-right:none; }
+    .intro-stat-num { font-family:'Playfair Display',serif; font-size:2rem; color:var(--amber); font-weight:700; }
+    .intro-stat-label { font-size:0.82rem; color:rgba(255,255,255,0.55); margin-top:4px; font-weight:300; line-height:1.4; }
+
+    /* IMPROVEMENT SECTIONS */
+    .improvement { background:#fff; }
+    .improvement.alt { background:var(--off-white); }
+    .improvement-grid { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; }
+    .improvement-grid.reverse { direction:rtl; }
+    .improvement-grid.reverse > * { direction:ltr; }
+    .improvement-visual { border-radius:16px; overflow:hidden; position:relative; }
+    .improvement-visual-inner {
+      border-radius:16px;
+      padding:40px 36px;
+      color:#fff;
+      min-height:340px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      position:relative;
+      overflow:hidden;
+    }
+    .improvement-visual-inner::before {
+      content:'';
+      position:absolute; inset:0;
+      opacity:0.07;
+    }
+    .visual-loft { background:linear-gradient(145deg,#1a3a2a,#2d6b3e); }
+    .visual-heating { background:linear-gradient(145deg,#1a2d3a,var(--teal)); }
+    .visual-solar { background:linear-gradient(145deg,#2d2a1a,#8a6a1a); }
+    .visual-walls { background:linear-gradient(145deg,#1e2d45,#3a4d6b); }
+    .visual-windows { background:linear-gradient(145deg,#1a3a4a,#1e7a8c); }
+    .visual-icon { font-size:3.5rem; margin-bottom:16px; }
+    .visual-title { font-family:'Playfair Display',serif; font-size:1.5rem; margin-bottom:10px; }
+    .visual-sub { font-size:0.88rem; color:rgba(255,255,255,0.65); font-weight:300; line-height:1.6; margin-bottom:24px; }
+    .epc-uplift { display:flex; align-items:center; gap:12px; }
+    .epc-from, .epc-to { display:flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:6px; font-weight:800; font-size:1.1rem; color:#fff; }
+    .epc-arrow-icon { font-size:1.2rem; color:rgba(255,255,255,0.6); }
+    .epc-uplift-label { font-size:0.75rem; color:rgba(255,255,255,0.55); font-weight:400; }
+
+    .improvement-content h2 { font-family:'Playfair Display',serif; font-size:clamp(1.5rem,2.8vw,2.1rem); color:var(--navy); line-height:1.28; margin-bottom:16px; }
+    .improvement-content p { font-size:0.95rem; color:var(--mid-grey); line-height:1.8; font-weight:300; margin-bottom:18px; }
+    .improvement-content p:last-of-type { margin-bottom:24px; }
+    .benefit-list { list-style:none; margin-bottom:28px; }
+    .benefit-list li { display:flex; align-items:flex-start; gap:10px; font-size:0.9rem; color:var(--mid-grey); padding:8px 0; border-bottom:1px solid #f0f2f5; font-weight:300; line-height:1.5; }
+    .benefit-list li:last-child { border-bottom:none; }
+    .benefit-list li::before { content:'✓'; color:var(--green); font-weight:700; flex-shrink:0; margin-top:1px; }
+    .improvement-tag { display:inline-flex; align-items:center; gap:7px; background:rgba(74,158,63,0.1); border:1px solid rgba(74,158,63,0.25); color:var(--green); font-size:0.75rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:6px 14px; border-radius:20px; margin-bottom:16px; }
+    .saving-badge { display:inline-flex; align-items:center; gap:8px; background:var(--amber); color:var(--navy-deep); font-weight:700; font-size:0.82rem; padding:8px 16px; border-radius:6px; margin-bottom:24px; }
+    .btn-primary { background:var(--green); color:#fff; padding:14px 28px; border-radius:5px; text-decoration:none; font-weight:600; font-size:0.93rem; transition:background 0.25s,transform 0.2s; display:inline-block; }
+    .btn-primary:hover { background:var(--green-light); transform:translateY(-1px); }
+    .btn-outline-dark { border:2px solid var(--navy); color:var(--navy); padding:12px 28px; border-radius:5px; text-decoration:none; font-weight:500; font-size:0.93rem; transition:all 0.2s; display:inline-block; margin-left:12px; }
+    .btn-outline-dark:hover { background:var(--navy); color:#fff; }
+
+    /* GRANTS SECTION */
+    .grants { background:var(--navy); }
+    .grants-header { text-align:center; margin-bottom:48px; }
+    .grants-header .section-eyebrow { color:var(--amber); }
+    .grants-header .section-title { color:#fff; }
+    .grants-header p { color:rgba(255,255,255,0.6); font-size:1rem; font-weight:300; max-width:560px; margin:0 auto; }
+    .grants-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-bottom:40px; }
+    .grant-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:28px 24px; transition:background 0.2s; }
+    .grant-card:hover { background:rgba(255,255,255,0.09); }
+    .grant-icon { font-size:1.8rem; margin-bottom:14px; }
+    .grant-card h3 { font-family:'Playfair Display',serif; font-size:1.1rem; color:#fff; margin-bottom:10px; }
+    .grant-card p { font-size:0.87rem; color:rgba(255,255,255,0.65); line-height:1.7; font-weight:300; margin-bottom:14px; }
+    .grant-tag { display:inline-block; background:rgba(245,166,35,0.15); border:1px solid rgba(245,166,35,0.3); color:var(--amber); font-size:0.72rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:4px 10px; border-radius:10px; }
+    .grants-note { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:24px 28px; display:flex; align-items:flex-start; gap:16px; }
+    .grants-note-icon { font-size:1.4rem; flex-shrink:0; margin-top:2px; }
+    .grants-note h4 { font-weight:700; color:#fff; font-size:0.95rem; margin-bottom:6px; }
+    .grants-note p { font-size:0.87rem; color:rgba(255,255,255,0.6); font-weight:300; line-height:1.65; }
+
+    /* HOW IT CONNECTS */
+    .how-connects { background:#fff; }
+    .connects-header { text-align:center; margin-bottom:52px; }
+    .connects-header .section-sub { margin:0 auto; }
+    .connects-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:0; position:relative; }
+    .connects-steps::before { content:''; position:absolute; top:26px; left:12.5%; right:12.5%; height:2px; background:linear-gradient(90deg,var(--green),var(--amber)); }
+    .connect-step { text-align:center; padding:0 16px; }
+    .connect-num { width:52px; height:52px; background:var(--navy); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:1.2rem; margin:0 auto 18px; position:relative; z-index:1; border:3px solid var(--off-white); }
+    .connect-step h4 { font-weight:600; font-size:0.92rem; color:var(--navy); margin-bottom:7px; }
+    .connect-step p { font-size:0.82rem; color:var(--mid-grey); line-height:1.6; font-weight:300; }
+
+    /* CTA BAND */
+    .cta-band { background:linear-gradient(135deg,var(--navy-deep),var(--navy) 60%,#1a3a4a); padding:80px 6vw; text-align:center; }
+    .cta-band h2 { font-family:'Playfair Display',serif; font-size:clamp(1.7rem,3vw,2.6rem); color:#fff; margin-bottom:16px; }
+    .cta-band p { color:rgba(255,255,255,0.65); font-size:1rem; margin-bottom:36px; font-weight:300; }
+    .cta-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+    .btn-amber { background:var(--amber); color:var(--navy-deep); font-weight:700; padding:15px 32px; border-radius:5px; text-decoration:none; font-size:0.95rem; transition:filter 0.2s,transform 0.2s; }
+    .btn-amber:hover { filter:brightness(1.1); transform:translateY(-1px); }
+    .btn-outline-light { border:2px solid rgba(255,255,255,0.3); color:#fff; padding:13px 32px; border-radius:5px; text-decoration:none; font-weight:500; font-size:0.95rem; transition:border-color 0.25s; }
+    .btn-outline-light:hover { border-color:var(--amber); }
+
+    /* FOOTER */
+    footer { background:var(--navy-deep); color:rgba(255,255,255,0.55); padding:48px 6vw 28px; }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:40px; margin-bottom:36px; }
+    .footer-brand img { height:52px; margin-bottom:14px; display:block; }
+    .footer-brand p { font-size:0.85rem; line-height:1.7; font-weight:300; max-width:280px; }
+    .footer-col h4 { font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.8); margin-bottom:14px; }
+    .footer-col a { display:block; color:rgba(255,255,255,0.5); text-decoration:none; font-size:0.87rem; margin-bottom:8px; transition:color 0.2s; }
+    .footer-col a:hover { color:var(--amber); }
+    .footer-col p { font-size:0.87rem; line-height:1.7; }
+    .footer-bottom { border-top:1px solid rgba(255,255,255,0.06); padding-top:22px; display:flex; justify-content:space-between; font-size:0.78rem; flex-wrap:wrap; gap:10px; }
+    .footer-bottom a { color:rgba(255,255,255,0.4); text-decoration:none; }
+    .footer-bottom a:hover { color:var(--amber); }
+
+    /* TABLET */
+    @media(max-width:900px) {
+      .nav-links { display:none; } .hamburger { display:flex; } .mobile-menu { display:flex; }
+      .page-hero { padding:110px 6vw 60px; }
+      .intro-strip-inner { grid-template-columns:1fr 1fr 1fr; }
+      .improvement-grid, .improvement-grid.reverse { grid-template-columns:1fr; gap:36px; direction:ltr; }
+      .grants-grid { grid-template-columns:1fr 1fr; }
+      .connects-steps { grid-template-columns:1fr 1fr; gap:36px; }
+      .connects-steps::before { display:none; }
+      .footer-grid { grid-template-columns:1fr 1fr; gap:28px; }
+      .footer-brand { grid-column:1/-1; }
+    }
+
+    /* MOBILE */
+    @media(max-width:600px) {
+      nav { padding:0 5vw; height:64px; } .nav-logo img { height:40px; } .mobile-menu { top:64px; }
+      .page-hero { padding:88px 5vw 48px; }
+      .page-hero h1 { font-size:clamp(1.7rem,7.5vw,2.2rem); }
+      .intro-strip-inner { grid-template-columns:1fr 1fr; }
+      .intro-stat:nth-child(3) { grid-column:1/-1; border-right:none; border-top:1px solid rgba(255,255,255,0.08); }
+      section { padding:52px 5vw; }
+      .improvement-visual-inner { padding:28px 22px; min-height:260px; }
+      .grants-grid { grid-template-columns:1fr; }
+      .connects-steps { grid-template-columns:1fr; }
+      .connect-step { display:flex; align-items:flex-start; gap:14px; text-align:left; }
+      .connect-num { margin:0; flex-shrink:0; width:44px; height:44px; font-size:1.1rem; }
+      .cta-band { padding:52px 5vw; }
+      .cta-btns { flex-direction:column; align-items:center; }
+      .btn-amber, .btn-outline-light { width:100%; max-width:320px; text-align:center; padding:16px 24px; }
+      .btn-outline-dark { margin-left:0; margin-top:12px; display:block; }
+      .footer-grid { grid-template-columns:1fr; gap:24px; } .footer-brand { grid-column:auto; }
+      footer { padding:36px 5vw 20px; } .footer-bottom { flex-direction:column; text-align:center; gap:6px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="https://www.dropbox.com/scl/fi/dybbf43rt3a0gb7jxwgl4/SAS-Home-Energy-logo-design-1.png?rlkey=93v1pexz0c1an2e80ktc2iy7s&st=g7nm3pd9&dl=1" alt="SAS Home Energy" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="improvements.html" class="active">Improvements</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contactus.html">Contact</a></li>
+      <li><a href="contactus.html" class="nav-cta">Book Now</a></li>
+    </ul>
+    <button class="hamburger" id="menuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="improvements.html">Improvements</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contactus.html">Contact</a>
+    <a href="contactus.html" class="mobile-cta">Book an Assessment</a>
+    <p class="mobile-phone">Call us: <a href="tel:07480839113">07480 839113</a></p>
+  </div>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Energy Improvements</div>
+      <h1>Improve Your Home.<br><em>Improve Your Rating.</em></h1>
+      <p>A better EPC rating means lower energy bills, a higher property value, and a warmer, more comfortable home. Our assessors identify exactly which improvements will make the biggest difference — and which grants you may be entitled to.</p>
+      <div class="hero-badges">
+        <span class="hero-badge">🏠 Loft Insulation</span>
+        <span class="hero-badge">🔥 Heating Upgrades</span>
+        <span class="hero-badge">☀️ Solar Installations</span>
+        <span class="hero-badge">🧱 Wall Insulation</span>
+        <span class="hero-badge">🪟 Glazing</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRO STATS -->
+  <div class="intro-strip">
+    <div class="intro-strip-inner">
+      <div class="intro-stat">
+        <div class="intro-stat-num">£690</div>
+        <div class="intro-stat-label">Average annual saving from loft insulation in an uninsulated home</div>
+      </div>
+      <div class="intro-stat">
+        <div class="intro-stat-num">2 bands</div>
+        <div class="intro-stat-label">Typical EPC improvement from a full insulation and heating upgrade</div>
+      </div>
+      <div class="intro-stat">
+        <div class="intro-stat-num">£3,000+</div>
+        <div class="intro-stat-label">Potential uplift in property value per EPC band improvement</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOFT INSULATION -->
+  <section class="improvement" id="loft">
+    <div class="improvement-grid">
+      <div class="improvement-visual">
+        <div class="improvement-visual-inner visual-loft">
+          <div>
+            <div class="visual-icon">🏠</div>
+            <div class="visual-title">Loft Insulation</div>
+            <div class="visual-sub">Up to 25% of a home's heat is lost through the roof. Loft insulation is the single most cost-effective improvement available to most UK homeowners.</div>
+          </div>
+          <div>
+            <div style="font-size:0.72rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px">Typical EPC Impact</div>
+            <div class="epc-uplift">
+              <div class="epc-from" style="background:#ffd500">D</div>
+              <div class="epc-arrow-icon">→</div>
+              <div class="epc-to" style="background:#8dce46">C</div>
+              <div class="epc-uplift-label">or better, depending on property</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="improvement-content">
+        <div class="improvement-tag">💰 Grants Available</div>
+        <h2>Loft Insulation</h2>
+        <div class="saving-badge">💡 Save up to £690/year on energy bills</div>
+        <p>Loft insulation is one of the cheapest, quickest, and most impactful improvements you can make to your home. If your loft has less than 270mm of insulation — or none at all — you could be losing a significant amount of heat and paying far more than you need to on your energy bills.</p>
+        <p>For most properties, installing or topping up loft insulation to the recommended 270mm depth can be completed in just a few hours and will have an immediate impact on your EPC rating and your heating costs.</p>
+        <ul class="benefit-list">
+          <li>Reduces heat loss through the roof by up to 25%</li>
+          <li>Can improve your EPC by one full band or more</li>
+          <li>Payback period typically 1–2 years</li>
+          <li>Suitable for the vast majority of properties with accessible lofts</li>
+          <li>May be fully funded through ECO4 or the Great British Insulation Scheme for eligible households</li>
+          <li>Improves comfort throughout the home, not just in winter</li>
+        </ul>
+        <a href="contactus.html" class="btn-primary">Book an Assessment</a>
+        <a href="#grants" class="btn-outline-dark">Check Grant Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEATING UPGRADES -->
+  <section class="improvement alt" id="heating">
+    <div class="improvement-grid reverse">
+      <div class="improvement-visual">
+        <div class="improvement-visual-inner visual-heating">
+          <div>
+            <div class="visual-icon">🔥</div>
+            <div class="visual-title">Heating Upgrades</div>
+            <div class="visual-sub">Your heating system is the largest single factor in your EPC rating. Upgrading from an old boiler or inefficient system can transform your score.</div>
+          </div>
+          <div>
+            <div style="font-size:0.72rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px">Typical EPC Impact</div>
+            <div class="epc-uplift">
+              <div class="epc-from" style="background:#fcaa65">E</div>
+              <div class="epc-arrow-icon">→</div>
+              <div class="epc-to" style="background:#8dce46">C</div>
+              <div class="epc-uplift-label">switching from old boiler to heat pump</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="improvement-content">
+        <div class="improvement-tag">💰 Grants Available</div>
+        <h2>Heating System Upgrades</h2>
+        <div class="saving-badge">💡 Save up to £580/year replacing an old gas boiler</div>
+        <p>Your heating system has a greater impact on your EPC rating than almost any other single factor. Whether you're replacing an ageing gas boiler with a modern condensing unit, installing a heat pump, or upgrading to a more efficient heating control system, the results can be dramatic.</p>
+        <p>Our assessors identify exactly what your current system is costing you and which upgrade path will give you the best improvement for your property type and budget — from simple boiler replacements to full heat pump installations.</p>
+        <ul class="benefit-list">
+          <li>Modern condensing boilers are up to 94% efficient vs. 60–70% for older models</li>
+          <li>Air source heat pumps can deliver 3 units of heat per unit of electricity consumed</li>
+          <li>Smart heating controls and thermostatic radiator valves can save 10–15% on bills alone</li>
+          <li>Heat pumps qualify for the Boiler Upgrade Scheme grant (currently £7,500)</li>
+          <li>Under-floor heating and heat pump combinations ideal for well-insulated properties</li>
+          <li>Biomass boilers may be eligible for Renewable Heat Incentive payments</li>
+        </ul>
+        <a href="contactus.html" class="btn-primary">Book an Assessment</a>
+        <a href="#grants" class="btn-outline-dark">Check Grant Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLAR -->
+  <section class="improvement" id="solar">
+    <div class="improvement-grid">
+      <div class="improvement-visual">
+        <div class="improvement-visual-inner visual-solar">
+          <div>
+            <div class="visual-icon">☀️</div>
+            <div class="visual-title">Solar Panel Installation</div>
+            <div class="visual-sub">Solar PV systems generate free electricity from daylight — dramatically reducing your energy bills and pushing your EPC rating towards the top of the scale.</div>
+          </div>
+          <div>
+            <div style="font-size:0.72rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px">Typical EPC Impact</div>
+            <div class="epc-uplift">
+              <div class="epc-from" style="background:#8dce46">C</div>
+              <div class="epc-arrow-icon">→</div>
+              <div class="epc-to" style="background:#19b459">B</div>
+              <div class="epc-uplift-label">or A with battery storage</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="improvement-content">
+        <div class="improvement-tag">⚡ Generate Your Own Energy</div>
+        <h2>Solar Panel Installations</h2>
+        <div class="saving-badge">💡 Average saving of £1,000+/year with a 4kW system</div>
+        <p>Solar photovoltaic (PV) panels convert daylight into electricity that can power your home directly, dramatically reducing your reliance on the grid. Even in the UK's variable climate, a well-positioned solar installation can generate a significant proportion of a home's annual energy needs.</p>
+        <p>When combined with a battery storage system, excess energy generated during the day can be stored and used in the evenings — maximising your savings and pushing your EPC rating towards A or B. Solar installations are particularly powerful for homes that already have good insulation and efficient heating, as they can tip a C-rated home into the B band.</p>
+        <ul class="benefit-list">
+          <li>A typical 4kW domestic system generates around 3,400kWh per year</li>
+          <li>Smart Export Guarantee (SEG) allows you to sell surplus electricity back to the grid</li>
+          <li>Battery storage increases self-consumption from ~30% to ~70%+</li>
+          <li>Solar thermal panels can heat your hot water for free during summer months</li>
+          <li>Panels are typically warranted for 25 years with minimal maintenance required</li>
+          <li>Adds significant value to your property and improves saleability</li>
+        </ul>
+        <a href="contactus.html" class="btn-primary">Book an Assessment</a>
+        <a href="#grants" class="btn-outline-dark">Check Grant Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WALL INSULATION -->
+  <section class="improvement alt" id="walls">
+    <div class="improvement-grid reverse">
+      <div class="improvement-visual">
+        <div class="improvement-visual-inner visual-walls">
+          <div>
+            <div class="visual-icon">🧱</div>
+            <div class="visual-title">Wall Insulation</div>
+            <div class="visual-sub">Around 35% of heat loss in an uninsulated home escapes through the walls. The right solution depends on whether your home has cavity or solid walls.</div>
+          </div>
+          <div>
+            <div style="font-size:0.72rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px">Typical EPC Impact</div>
+            <div class="epc-uplift">
+              <div class="epc-from" style="background:#ef8023">F</div>
+              <div class="epc-arrow-icon">→</div>
+              <div class="epc-to" style="background:#ffd500">D</div>
+              <div class="epc-uplift-label">solid wall insulation — older properties</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="improvement-content">
+        <div class="improvement-tag">💰 Grants Available</div>
+        <h2>Wall Insulation</h2>
+        <div class="saving-badge">💡 Save up to £395/year with cavity wall insulation</div>
+        <p>Walls are responsible for around a third of all heat loss in an uninsulated property. The solution depends on your property's construction — modern homes built after the 1920s typically have cavity walls, while older and traditional properties often have solid walls that require a different approach.</p>
+        <p>Our assessors can identify your wall construction type during an EPC assessment and recommend the most appropriate and cost-effective solution, whether that's cavity fill, internal wall insulation (IWI), or external wall insulation (EWI).</p>
+        <ul class="benefit-list">
+          <li>Cavity wall insulation: quick to install, highly cost-effective, minimal disruption</li>
+          <li>External wall insulation improves aesthetics and weatherproofing as well as energy performance</li>
+          <li>Internal wall insulation suitable where external appearance must be preserved</li>
+          <li>Particularly impactful for pre-1919 solid-wall properties with poor baseline ratings</li>
+          <li>May qualify for full funding under ECO4 for eligible households</li>
+          <li>Must be assessed carefully in traditionally constructed buildings to avoid moisture issues</li>
+        </ul>
+        <a href="contactus.html" class="btn-primary">Book an Assessment</a>
+        <a href="#grants" class="btn-outline-dark">Check Grant Eligibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLAZING -->
+  <section class="improvement" id="glazing">
+    <div class="improvement-grid">
+      <div class="improvement-visual">
+        <div class="improvement-visual-inner visual-windows">
+          <div>
+            <div class="visual-icon">🪟</div>
+            <div class="visual-title">Double &amp; Triple Glazing</div>
+            <div class="visual-sub">Upgrading from single glazing to modern double or triple-glazed units reduces heat loss, eliminates draughts, and improves both comfort and acoustic performance.</div>
+          </div>
+          <div>
+            <div style="font-size:0.72rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px">Typical EPC Impact</div>
+            <div class="epc-uplift">
+              <div class="epc-from" style="background:#ffd500">D</div>
+              <div class="epc-arrow-icon">→</div>
+              <div class="epc-to" style="background:#8dce46">C/D+</div>
+              <div class="epc-uplift-label">combined with other improvements</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="improvement-content">
+        <div class="improvement-tag">🪟 Comfort &amp; Efficiency</div>
+        <h2>Double &amp; Triple Glazing</h2>
+        <div class="saving-badge">💡 Save up to £195/year replacing single glazing</div>
+        <p>Single-glazed windows are one of the most significant sources of heat loss and cold draughts in older properties. Modern double-glazed units are dramatically more efficient, and triple glazing offers the highest thermal performance currently available for domestic properties.</p>
+        <p>For listed buildings and properties in conservation areas where traditional glazing must be retained, secondary glazing can provide many of the same benefits while preserving the original windows — our assessors understand these constraints and can advise on the best approach.</p>
+        <ul class="benefit-list">
+          <li>Modern double glazing is up to three times more thermally efficient than single glazing</li>
+          <li>Draught-proofing alone can save £60–£100 per year at minimal cost</li>
+          <li>Low-emissivity (low-e) glass coating further reduces heat loss</li>
+          <li>Secondary glazing available for listed and heritage properties</li>
+          <li>Glazing upgrades improve acoustic insulation as well as thermal performance</li>
+          <li>Most impactful when combined with other measures as part of a whole-house approach</li>
+        </ul>
+        <a href="contactus.html" class="btn-primary">Book an Assessment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRANTS -->
+  <section class="grants" id="grants">
+    <div class="grants-header">
+      <div class="section-eyebrow">Funding &amp; Grants</div>
+      <h2 class="section-title">You May Not Have to Pay</h2>
+      <p>A range of government-backed schemes can significantly reduce or even eliminate the cost of energy improvements. A current EPC is often a requirement to access these grants.</p>
+    </div>
+    <div class="grants-grid">
+      <div class="grant-card">
+        <div class="grant-icon">🏠</div>
+        <h3>ECO4 Scheme</h3>
+        <p>The Energy Company Obligation (ECO4) requires energy suppliers to fund insulation and heating upgrades for low-income and fuel-poor households. Fully funded in many cases.</p>
+        <span class="grant-tag">Insulation &amp; Heating</span>
+      </div>
+      <div class="grant-card">
+        <div class="grant-icon">🇬🇧</div>
+        <h3>Great British Insulation Scheme</h3>
+        <p>Provides funding for single insulation measures — typically loft or cavity wall insulation — to households in lower Council Tax bands or those receiving qualifying benefits.</p>
+        <span class="grant-tag">Insulation</span>
+      </div>
+      <div class="grant-card">
+        <div class="grant-icon">🌡️</div>
+        <h3>Boiler Upgrade Scheme</h3>
+        <p>A £7,500 government grant towards the installation of an air source or ground source heat pump, reducing the upfront cost of switching away from gas or oil heating.</p>
+        <span class="grant-tag">Heat Pumps</span>
+      </div>
+      <div class="grant-card">
+        <div class="grant-icon">☀️</div>
+        <h3>Smart Export Guarantee</h3>
+        <p>Requires energy suppliers to pay you for surplus solar electricity exported to the grid. Rates vary by supplier — typically 4–15p per kWh.</p>
+        <span class="grant-tag">Solar PV</span>
+      </div>
+      <div class="grant-card">
+        <div class="grant-icon">🏡</div>
+        <h3>Local Authority Flex (LAF)</h3>
+        <p>Local councils can use ECO4 funding to support households not meeting standard criteria. Coverage varies by area — your assessor can advise on eligibility in your region.</p>
+        <span class="grant-tag">Various Measures</span>
+      </div>
+      <div class="grant-card">
+        <div class="grant-icon">🏦</div>
+        <h3>Green Mortgages</h3>
+        <p>Many lenders now offer preferential mortgage rates for properties with an EPC rating of A or B, making energy improvements a financially attractive option when buying or remortgaging.</p>
+        <span class="grant-tag">Finance</span>
+      </div>
+    </div>
+    <div class="grants-note">
+      <div class="grants-note-icon">ℹ️</div>
+      <div>
+        <h4>An up-to-date EPC is often required to access grants</h4>
+        <p>Most government schemes require a current Energy Performance Certificate to establish your baseline rating and confirm eligibility. If your EPC is out of date or you don't have one, booking an assessment is the first step towards accessing available funding. Our assessors can advise on which schemes you may qualify for during your assessment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT CONNECTS -->
+  <section class="how-connects">
+    <div class="connects-header">
+      <div class="section-eyebrow">The SAS Process</div>
+      <h2 class="section-title">From Assessment to Improvement</h2>
+      <p class="section-sub">Our EPC assessment is the starting point for your improvement journey — giving you the evidence and recommendations you need to act.</p>
+    </div>
+    <div class="connects-steps">
+      <div class="connect-step">
+        <div class="connect-num">1</div>
+        <h4>Book Your EPC</h4>
+        <p>We visit your property and carry out a full Domestic Energy Assessment, identifying every improvement opportunity.</p>
+      </div>
+      <div class="connect-step">
+        <div class="connect-num">2</div>
+        <h4>Receive Your Report</h4>
+        <p>Your certificate includes a personalised list of recommended measures, ranked by cost-effectiveness.</p>
+      </div>
+      <div class="connect-step">
+        <div class="connect-num">3</div>
+        <h4>Check for Grants</h4>
+        <p>We advise on which government schemes and grants your property and circumstances may qualify for.</p>
+      </div>
+      <div class="connect-step">
+        <div class="connect-num">4</div>
+        <h4>Improve &amp; Re-rate</h4>
+        <p>Once improvements are made, a new EPC confirms your upgraded rating — maximising value and compliance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-band">
+    <h2>Start With an Assessment</h2>
+    <p>Knowing where you stand is the first step. Book your EPC today and we'll identify every improvement opportunity and grant you could access.</p>
+    <div class="cta-btns">
+      <a href="contactus.html" class="btn-amber">Book an Assessment</a>
+      <a href="tel:07480839113" class="btn-outline-light">📞 07480 839113</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://www.dropbox.com/scl/fi/dybbf43rt3a0gb7jxwgl4/SAS-Home-Energy-logo-design-1.png?rlkey=93v1pexz0c1an2e80ktc2iy7s&st=g7nm3pd9&dl=1" alt="SAS Home Energy" />
+        <p>Qualified Domestic Energy Assessors providing Energy Performance Certificates and retrofit assessments across the UK.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="improvements.html">Improvements</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contactus.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📞 <a href="tel:07480839113" style="color:rgba(255,255,255,.5);text-decoration:none">07480 839113</a></p>
+        <p style="margin-top:8px">Mon–Sat: 9am – 8pm</p>
+        <p>Sunday: By Appointment</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SAS Home Energy. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; Accredited Domestic Energy Assessors · UK Nationwide</span>
+    </div>
+  </footer>
+
+  <script>
+    const btn=document.getElementById('menuBtn'),menu=document.getElementById('mobileMenu');
+    btn.addEventListener('click',()=>{const o=menu.classList.toggle('open');btn.classList.toggle('open',o);document.body.style.overflow=o?'hidden':''});
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');btn.classList.remove('open');document.body.style.overflow=''}));
+  </script>
+</body>
+</html>
